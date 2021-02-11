@@ -566,3 +566,43 @@ found 0 vulnerabilities
     {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":[],"kind":"action::set"}
 [08:52:45.362] Response has been sent.
 [08:52:45.362] No new typings were requested as a result of typings discovery
+[09:14:32.643] Got install request {"projectName":"/dev/null/inferredProject2*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/tony/Documents/nextjs/sistema-publikasi/components/nav","kind":"discover"}
+[09:14:32.650] Explicitly included types: []
+[09:14:32.650] Inferred typings from unresolved imports: []
+[09:14:32.651] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:14:32.651] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:14:32.651] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components
+[09:14:32.651] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules
+[09:14:32.652] Sending response:
+    {"projectName":"/dev/null/inferredProject2*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[09:14:32.652] Response has been sent.
+[09:14:32.652] No new typings were requested as a result of typings discovery
+[09:19:03.776] Got install request {"projectName":"/dev/null/inferredProject2*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/tony/Documents/nextjs/sistema-publikasi/components/nav","kind":"discover"}
+[09:19:03.783] Explicitly included types: []
+[09:19:03.784] Inferred typings from unresolved imports: []
+[09:19:03.785] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:19:03.785] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:19:03.786] Sending response:
+    {"projectName":"/dev/null/inferredProject2*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[09:19:03.786] Response has been sent.
+[09:19:03.786] No new typings were requested as a result of typings discovery
+[09:42:22.829] Got install request {"projectName":"/dev/null/inferredProject2*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/tony/Documents/nextjs/sistema-publikasi/components/nav","kind":"discover"}
+[09:42:22.837] Explicitly included types: []
+[09:42:22.838] Inferred typings from unresolved imports: []
+[09:42:22.839] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:42:22.839] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/nav/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/nav/node_modules"]}
+[09:42:22.840] Sending response:
+    {"projectName":"/dev/null/inferredProject2*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[09:42:22.840] Response has been sent.
+[09:42:22.840] No new typings were requested as a result of typings discovery
+[10:06:33.290] Got install request {"projectName":"/dev/null/inferredProject3*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/tony/Documents/nextjs/sistema-publikasi/components/hero","kind":"discover"}
+[10:06:33.294] Explicitly included types: []
+[10:06:33.295] Inferred typings from unresolved imports: []
+[10:06:33.297] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/hero/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/hero/node_modules"]}
+[10:06:33.297] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/hero/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/hero/node_modules"]}
+[10:06:33.298] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/hero/bower_components
+[10:06:33.299] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/hero/node_modules
+[10:06:33.300] Sending response:
+    {"projectName":"/dev/null/inferredProject3*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[10:06:33.300] Response has been sent.
+[10:06:33.300] No new typings were requested as a result of typings discovery
