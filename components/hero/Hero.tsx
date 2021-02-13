@@ -9,13 +9,19 @@ const StyledHero = styled.div`
   display: flex;
   justify-contents: center;
   align-items: strech;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
 `;
 
 const Hero = () => {
   return (
     <StyledHero>
-      <HeroImage />
       <HeroTitle />
+      <HeroImage />
     </StyledHero>
   );
 };

@@ -1,11 +1,14 @@
 import styled from "@emotion/styled";
 import { useNavbarState } from "../../contexts/GlobalContext";
 
+import { GiHamburgerMenu } from "react-icons/gi";
+
 const StyledNavHamburger = styled.div`
-  background-color: red;
+  padding: ${(props) => props.theme.spacings.xSmall};
+
   display: none;
 
-  @media (max-width: 1000px) {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     display: block;
   }
 `;
@@ -18,7 +21,7 @@ const NavHamburger = () => {
         setNavState({ ...navState, sidebarState: !navState.sidebarState })
       }
     >
-      <h1>Hello</h1>
+      <GiHamburgerMenu size="2rem" />
     </StyledNavHamburger>
   );
 };

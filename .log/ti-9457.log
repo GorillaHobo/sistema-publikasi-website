@@ -566,3 +566,14 @@ found 0 vulnerabilities
     {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
 [10:33:15.324] Response has been sent.
 [10:33:15.324] No new typings were requested as a result of typings discovery
+[12:50:06.331] Got install request {"projectName":"/dev/null/inferredProject2*","fileNames":[],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"/home/tony/Documents/nextjs/sistema-publikasi/components/buttons","kind":"discover"}
+[12:50:06.339] Explicitly included types: []
+[12:50:06.342] Inferred typings from unresolved imports: []
+[12:50:06.345] Result: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/buttons/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/buttons/node_modules"]}
+[12:50:06.345] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":[],"filesToWatch":["/home/tony/Documents/nextjs/sistema-publikasi/components/buttons/bower_components","/home/tony/Documents/nextjs/sistema-publikasi/components/buttons/node_modules"]}
+[12:50:06.346] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/buttons/bower_components
+[12:50:06.348] DirectoryWatcher:: Added:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi/components/buttons/node_modules
+[12:50:06.348] Sending response:
+    {"projectName":"/dev/null/inferredProject2*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true},"typings":[],"unresolvedImports":[],"kind":"action::set"}
+[12:50:06.349] Response has been sent.
+[12:50:06.349] No new typings were requested as a result of typings discovery

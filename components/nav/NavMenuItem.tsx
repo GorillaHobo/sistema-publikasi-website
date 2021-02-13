@@ -6,6 +6,7 @@ const StyledNavMenuItem = styled.li`
   padding: ${(props) => props.theme.spacings.xSmall}
     ${(props) => props.theme.spacings.small};
 
+  font-weight: 700;
   &.border {
     background-color: ${(props) => props.theme.colors.white};
     color: ${(props) => props.theme.colors.blue};
@@ -20,6 +21,7 @@ const StyledNavMenuItem = styled.li`
   }
   &:hover {
     color: ${(props) => props.theme.colors.blue};
+    cursor: pointer;
   }
 `;
 
@@ -32,9 +34,11 @@ const NavMenuItem = ({
   border?: boolean;
 }) => {
   return (
-    <StyledNavMenuItem className={border && "border"}>
-      <Link href={`${item.href}`}>{item.name}</Link>
-    </StyledNavMenuItem>
+    <Link href={item.href}>
+      <StyledNavMenuItem className={border && "border"}>
+        {item.name}
+      </StyledNavMenuItem>
+    </Link>
   );
 };
 

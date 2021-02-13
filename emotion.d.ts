@@ -28,6 +28,10 @@ export interface ITheme {
     medium: string;
     large: string;
   };
+  breakpoints: {
+    mobile: string;
+    tablet: string;
+  };
 }
 
 declare module "@emotion/react" {

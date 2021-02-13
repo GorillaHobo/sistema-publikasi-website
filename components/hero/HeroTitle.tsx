@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import ButtonNormal from "../buttons/ButtonNormal";
+
 const StyledHeroTitle = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.black};
@@ -11,6 +13,18 @@ const StyledHeroTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(40, 40, 40, 0.5);
+    z-index: 10;
+  }
 `;
 
 const HeroTitle = () => {
@@ -30,6 +44,7 @@ const HeroTitle = () => {
         quis est convallis tempor. Curabitur lacinia pulvinar nibh. Nam a
         sapien.
       </p>
+      <ButtonNormal />
     </StyledHeroTitle>
   );
 };

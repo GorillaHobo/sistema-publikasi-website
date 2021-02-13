@@ -38,4 +38,8 @@ export const theme: ITheme = {
     large:
       "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   },
+  breakpoints: {
+    mobile: "only screen and (max-width: 768px)",
+    tablet: "only screen and (max-width: 1000px)",
+  },
 };

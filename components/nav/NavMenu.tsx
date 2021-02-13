@@ -6,7 +6,7 @@ const StyledNavItem = styled.ul`
   display: flex;
   list-style: none;
 
-  @media (max-width: 1000px) {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     display: none;
   }
 `;
