@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useNavbarState } from "../../contexts/GlobalContext";
 
 const StyledNavHamburger = styled.div`
   background-color: red;
@@ -10,8 +11,13 @@ const StyledNavHamburger = styled.div`
 `;
 
 const NavHamburger = () => {
+  const { navState, setNavState } = useNavbarState();
   return (
-    <StyledNavHamburger>
+    <StyledNavHamburger
+      onClick={() =>
+        setNavState({ ...navState, sidebarState: !navState.sidebarState })
+      }
+    >
       <h1>Hello</h1>
     </StyledNavHamburger>
   );

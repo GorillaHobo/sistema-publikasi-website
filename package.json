@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/core": "^7.12.16",
     "@emotion/babel-plugin": "^11.2.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
@@ -17,6 +18,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
+    "react-transition-group": "^4.4.1",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {

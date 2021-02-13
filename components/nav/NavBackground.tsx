@@ -12,9 +12,12 @@ const StyledNavBackground = styled.div<{ navState: { sidebarState: boolean } }>`
   transform: translate(-50%, -50%);
   z-index: 99;
 
-  display: none;
+  opacity: 0;
+  transition: all ease 500ms;
+
+  display: ${(props) => (props.navState.sidebarState ? "block" : "none")};
   @media (max-width: 1000px) {
-    display: ${(props) => (props.navState.sidebarState ? "block" : "none")};
+    opacity: ${(props) => props.navState.sidebarState && "1"};
   }
 `;
 

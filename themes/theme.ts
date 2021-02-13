@@ -32,10 +32,10 @@ export const theme: ITheme = {
     blue: blue,
   },
   shadows: {
-    small:
-      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;",
+    small: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
     medium:
-      "rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px",
-    large: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+      "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    large:
+      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
   },
 };

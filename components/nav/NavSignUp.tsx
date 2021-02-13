@@ -14,7 +14,7 @@ const NavSignUp = () => {
   return (
     <StyledNavSignUp>
       <NavMenuItem item={{ href: "/signin", name: "Sign In" }} />
-      <NavMenuItem item={{ href: "/signup", name: "Sign Up" }} />
+      <NavMenuItem item={{ href: "/signup", name: "Sign Up" }} border />
     </StyledNavSignUp>
   );
 };

@@ -5,7 +5,6 @@ import NavMenu from "./NavMenu";
 import NavSignUp from "./NavSignUp";
 import NavIcon from "./NavIcon";
 import NavHamburger from "./NavHamburger";
-import NavBackground from "./NavBackground";
 
 export interface INavMenuItem {
   name: string;
@@ -27,29 +26,38 @@ const navMenuItems: INavMenuItem[] = [
   },
 ];
 
-const StyledNav = styled.nav`
-  background-color: ${(props) => props.theme.colors.blue};
-  color: ${(props) => props.theme.colors.white};
+const StyledNav = styled.nav<{ navPosition: boolean }>`
+  height: ${(props) =>
+    props.navPosition
+      ? props.theme.spacings.xLarge
+      : props.theme.spacings.xxLarge};
+
+  background-color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.black};
+  box-shadow: ${(props) => props.navPosition && props.theme.shadows.large};
 
   padding: 0 ${(props) => props.theme.spacings.medium};
-  width: 100vw;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
   z-index: 100;
+
+  transition: all ease 500ms;
 `;
 
 const Nav = () => {
   const [navPosition, setNavPosition] = useState<boolean>(false);
 
   const onScroll = (): void => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 20) {
       setNavPosition(true);
-    } else if (window.scrollY <= 80) {
+    } else {
       setNavPosition(false);
     }
   };
@@ -62,15 +70,12 @@ const Nav = () => {
   }, [onScroll]);
 
   return (
-    <>
-      <StyledNav>
-        <NavMenu navMenuItems={navMenuItems} />
-        <NavHamburger />
-        <NavIcon />
-        <NavSignUp />
-      </StyledNav>
-      <NavBackground />
-    </>
+    <StyledNav navPosition={navPosition}>
+      <NavMenu navMenuItems={navMenuItems} />
+      <NavHamburger />
+      <NavIcon />
+      <NavSignUp />
+    </StyledNav>
   );
 };
 

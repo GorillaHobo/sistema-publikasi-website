@@ -1,15 +1,22 @@
+import styled from "@emotion/styled";
+
 import Image from "next/image";
-const HeroImage = () => {
+
+const StyledHeroImage = styled.div`
+  position: relative;
+  width: 50%;
+`;
+
+const HeroImage: React.FC = () => {
   return (
-    <div>
+    <StyledHeroImage>
       <Image
         src="/hero.jpg"
-        alt="Picture of the author"
         layout="fill"
+        alt="Picture of the author"
         objectFit="cover"
-        className="w-1/2"
       />
-    </div>
+    </StyledHeroImage>
   );
 };
 
