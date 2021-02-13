@@ -5,6 +5,10 @@ import { INavMenuItem } from "./Nav";
 const StyledNavItem = styled.ul`
   display: flex;
   list-style: none;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const NavItem = ({ navMenuItems }: { navMenuItems: INavMenuItem[] }) => {

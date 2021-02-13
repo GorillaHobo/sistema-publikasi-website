@@ -6,13 +6,7 @@ const StyledNavMenuItem = styled.li`
   padding: ${(props) => props.theme.spacings.small};
 `;
 
-const NavMenuItem = ({
-  item,
-  className,
-}: {
-  item: INavMenuItem;
-  className?: string;
-}) => {
+const NavMenuItem = ({ item }: { item: INavMenuItem }) => {
   return (
     <StyledNavMenuItem>
       <Link href={`${item.href}`}>{item.name}</Link>

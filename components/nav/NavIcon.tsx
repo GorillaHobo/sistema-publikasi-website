@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaReact } from "react-icons/fa";
 import styled from "@emotion/styled";
 
@@ -14,7 +15,9 @@ const StyledNavIcon = styled.div`
 const NavIcon = () => {
   return (
     <StyledNavIcon>
-      <h2>Sistema Publikasi</h2>
+      <Link href="/">
+        <h2>Sistema Publikasi</h2>
+      </Link>
       <FaReact size="2rem" />
     </StyledNavIcon>
   );

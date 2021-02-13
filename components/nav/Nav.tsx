@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
+
 import NavMenu from "./NavMenu";
 import NavSignUp from "./NavSignUp";
 import NavIcon from "./NavIcon";
+import NavHamburger from "./NavHamburger";
+import NavBackground from "./NavBackground";
 
 export interface INavMenuItem {
   name: string;
@@ -25,15 +28,23 @@ const navMenuItems: INavMenuItem[] = [
 ];
 
 const StyledNav = styled.nav`
+  background-color: ${(props) => props.theme.colors.blue};
+  color: ${(props) => props.theme.colors.white};
+
+  padding: 0 ${(props) => props.theme.spacings.medium};
+  width: 100vw;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.green};
-  color: ${(props) => props.theme.colors.black};
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
 `;
 
 const Nav = () => {
-  const [navPosition, setNavPosition] = useState(false);
+  const [navPosition, setNavPosition] = useState<boolean>(false);
 
   const onScroll = (): void => {
     if (window.scrollY > 100) {
@@ -51,11 +62,15 @@ const Nav = () => {
   }, [onScroll]);
 
   return (
-    <StyledNav>
-      <NavMenu navMenuItems={navMenuItems} />
-      <NavIcon />
-      <NavSignUp />
-    </StyledNav>
+    <>
+      <StyledNav>
+        <NavMenu navMenuItems={navMenuItems} />
+        <NavHamburger />
+        <NavIcon />
+        <NavSignUp />
+      </StyledNav>
+      <NavBackground />
+    </>
   );
 };
 

@@ -4,6 +4,10 @@ import styled from "@emotion/styled";
 const StyledNavSignUp = styled.ul`
   display: flex;
   list-style: none;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const NavSignUp = () => {
