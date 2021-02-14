@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNavbarState } from "../../contexts/GlobalContext";
+import { useNavState } from "../../contexts/NavContext";
 
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 
@@ -17,7 +17,7 @@ const StyledNavHamburger = styled.div`
 `;
 
 const NavHamburger = () => {
-  const { navState, setNavState } = useNavbarState();
+  const { navState, setNavState } = useNavState();
   return (
     <StyledNavHamburger
       onClick={() => setNavState({ sidebarState: !navState.sidebarState })}

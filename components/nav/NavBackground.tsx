@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useNavbarState } from "../../contexts/GlobalContext";
+import { useNavState } from "../../contexts/NavContext";
 import { CSSTransition } from "react-transition-group";
 
 const StyledNavBackground = styled.div`
@@ -37,7 +37,7 @@ const StyledNavBackground = styled.div`
 `;
 
 const NavBackground = () => {
-  const { navState, setNavState } = useNavbarState();
+  const { navState, setNavState } = useNavState();
 
   return (
     <CSSTransition

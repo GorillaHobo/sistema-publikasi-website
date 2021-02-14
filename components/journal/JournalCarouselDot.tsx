@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-
+import { useJournalState } from "../../contexts/JournalContext";
 const Dot = styled.div`
   background-color: ${(props) => props.theme.colors.blackLight};
 
@@ -34,8 +34,6 @@ const JournalCarouselDot = ({
   current: number;
   selectCurrentImage?: (newCurrent: number) => void;
 }) => {
-  console.log({ current });
-  console.log([...Array(length + 1)]);
   const arr: number[] = [...Array(length + 1)];
 
   return (

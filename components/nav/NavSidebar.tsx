@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import NavMenuItem from "./NavMenuItem";
 import { INavMenuItem } from "./Nav";
-import { useNavbarState } from "../../contexts/GlobalContext";
+import { useNavState } from "../../contexts/NavContext";
 import { CSSTransition } from "react-transition-group";
 
 const StyledNavSidebar = styled.ul`
@@ -28,7 +28,7 @@ const StyledNavSidebar = styled.ul`
 `;
 
 const NavSidebar = ({ navMenuItems }: { navMenuItems: INavMenuItem[] }) => {
-  const { navState } = useNavbarState();
+  const { navState } = useNavState();
   return (
     <CSSTransition
       in={navState.sidebarState}

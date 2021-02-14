@@ -1,4 +1,10 @@
-import { createContext, Dispatch, SetStateAction } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 interface INavState {
   sidebarState: boolean;
@@ -9,6 +15,23 @@ interface INavProps {
   setNavState: Dispatch<SetStateAction<INavState>>;
 }
 
-const NavbarContext = createContext<INavProps | undefined>(undefined);
+const NavContext = createContext<INavProps | undefined>(undefined);
 
-export { NavbarContext };
+const NavProvider = ({ children }) => {
+  const [navState, setNavState] = useState({ sidebarState: false });
+  return (
+    <NavContext.Provider value={{ navState, setNavState }}>
+      {children}
+    </NavContext.Provider>
+  );
+};
+
+const useNavState = () => {
+  const context = useContext(NavContext);
+  if (context === undefined) {
+    throw new Error("useNavbarDispatch must be used within a GlobalProvider");
+  }
+  return context;
+};
+
+export { NavProvider, useNavState };

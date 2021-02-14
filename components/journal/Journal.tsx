@@ -1,6 +1,8 @@
+import {
+  JournalProvider,
+  useJournalContext,
+} from "../../contexts/JournalContext";
 import styled from "@emotion/styled";
-import JournalCarouselImages from "./JournalCarouselImages";
-import JournalInfo from "./JournalInfo";
 
 const StyledJournal = styled.div`
   height: 100vh;
@@ -10,12 +12,35 @@ const StyledJournal = styled.div`
   align-items: center;
 `;
 
+const Testing = () => {
+  const { journalState, journalDispatch } = useJournalContext();
+  return (
+    <div>
+      <h1>{journalState.currentImage}</h1>
+      <button
+        onClick={() =>
+          journalDispatch({ type: "SET_CURRENT_IMAGE", payload: 1 })
+        }
+      >
+        set to 1
+      </button>
+      <button onClick={() => journalDispatch({ type: "PREV_IMAGE" })}>
+        Prev
+      </button>
+      <button onClick={() => journalDispatch({ type: "NEXT_IMAGE" })}>
+        Next
+      </button>
+    </div>
+  );
+};
+
 const Journal = () => {
   return (
-    <StyledJournal>
-      <JournalCarouselImages />
-      <JournalInfo />
-    </StyledJournal>
+    <JournalProvider>
+      <StyledJournal>
+        <Testing />
+      </StyledJournal>
+    </JournalProvider>
   );
 };
 

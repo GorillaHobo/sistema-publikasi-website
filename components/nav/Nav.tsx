@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavProvider } from "../../contexts/NavContext";
 import styled from "@emotion/styled";
 
 import NavMenu from "./NavMenu";
@@ -70,7 +71,7 @@ const Nav = () => {
   }, [onScroll]);
 
   return (
-    <>
+    <NavProvider>
       <StyledNav navPosition={navPosition}>
         <NavMenu navMenuItems={navMenuItems} />
         <NavHamburger />
@@ -79,7 +80,7 @@ const Nav = () => {
       </StyledNav>
       <NavSidebar navMenuItems={navMenuItems} />
       <NavBackground />
-    </>
+    </NavProvider>
   );
 };
 

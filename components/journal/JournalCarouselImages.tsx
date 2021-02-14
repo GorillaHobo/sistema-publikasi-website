@@ -8,7 +8,7 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import JournalCarouselDot from "./JournalCarouselDot";
 
 const StyledJournalCarouselImages = styled.div`
-  background: ${(props) => props.theme.colors.blue};
+  background: radial-gradient(#458588, #336366);
   width: 50%;
   height: 100%;
 
