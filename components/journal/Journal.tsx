@@ -1,15 +1,20 @@
 import styled from "@emotion/styled";
-import JournalCarousel from "./JournalCarousel";
+import JournalCarouselImages from "./JournalCarouselImages";
+import JournalInfo from "./JournalInfo";
 
 const StyledJournal = styled.div`
-  position: relative
   height: 100vh;
+  padding: ${(props) => props.theme.spacings.md};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Journal = () => {
   return (
     <StyledJournal>
-      <JournalCarousel />
+      <JournalCarouselImages />
+      <JournalInfo />
     </StyledJournal>
   );
 };

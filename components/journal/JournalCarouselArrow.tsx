@@ -5,12 +5,16 @@ const StyledJournalCarouselArrow = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: 3rem;
   user-select: none;
+  z-index: 100;
 
-  &.right {
-    right: 36px;
-  }
+  position: absolute;
+  top: 48%;
+
   &.left {
-    left: 36px;
+    left: 5%;
+  }
+  &.right {
+    right: 5%;
   }
 
   &:hover {
@@ -19,7 +23,7 @@ const StyledJournalCarouselArrow = styled.div`
 `;
 
 const JournalCarouselArrow = ({
-  isRight,
+  isRight = false,
   onClick,
 }: {
   isRight?: boolean;

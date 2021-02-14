@@ -3,6 +3,7 @@ import "@emotion/react";
 export interface ITheme {
   colors: {
     black: string;
+    blackLight: string;
     white: string;
     yellow: string;
     green: string;

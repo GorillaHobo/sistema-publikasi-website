@@ -2,10 +2,12 @@ import Image from "next/image";
 import styled from "@emotion/styled";
 
 const StyledJournalCarouselImage = styled.div`
-  width: 400px;
-  height: 566px;
+  background-color: white;
   position: relative;
   margin: 0 3rem;
+  box-shadow: ${(props) => props.theme.shadows.large};
+
+  ${(props) => props.theme.transition.fade};
 `;
 
 const JournalCarouselImage = ({
@@ -17,8 +19,9 @@ const JournalCarouselImage = ({
     <StyledJournalCarouselImage>
       <Image
         src={`/journal1/${item.image}.png`}
-        layout="fill"
-        objectFit="cover"
+        layout="intrinsic"
+        height={530}
+        width={370}
         quality={100}
         alt={item.alt}
       />

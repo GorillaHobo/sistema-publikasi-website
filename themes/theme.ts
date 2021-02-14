@@ -5,7 +5,8 @@ const green: string = "#98971a";
 const yellow: string = "#d79921";
 const blue: string = "#458588";
 const magenta: string = "#b16286";
-const black: string = "#282828";
+const black: string = "hsl(0, 0%, 16%)";
+const blackLight: string = "hsl(0, 0%, 30%)";
 const white: string = "#FFFFFF";
 
 export const theme: ITheme = {
@@ -30,6 +31,7 @@ export const theme: ITheme = {
     red: red,
     magenta: magenta,
     black: black,
+    blackLight: blackLight,
     white: white,
     blue: blue,
   },
@@ -55,14 +57,14 @@ export const theme: ITheme = {
               }
               &.fade-enter-active {
                 opacity: 1;
-                transition: opacity ease 500ms;
+                transition: opacity ease 200ms;
               }
               &.fade-exit {
                 opacity: 1;
               }
               &.fade-exit-active {
                 opacity: 0;
-                transition: opacity ease 500ms;
+                transition: opacity ease 200ms;
               }
           `,
     slide: `  &.fade-enter {

@@ -16,13 +16,11 @@ const StyledNavHamburger = styled.div`
   }
 `;
 
-const NavHamburger = (props) => {
+const NavHamburger = () => {
   const { navState, setNavState } = useNavbarState();
   return (
     <StyledNavHamburger
-      onClick={() =>
-        setNavState({ ...navState, sidebarState: !navState.sidebarState })
-      }
+      onClick={() => setNavState({ sidebarState: !navState.sidebarState })}
     >
       {navState.sidebarState ? (
         <IoCloseSharp size="1.8rem" color="#282828" />

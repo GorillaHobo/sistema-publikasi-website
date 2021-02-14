@@ -47,7 +47,7 @@ const NavBackground = () => {
       unmountOnExit
     >
       <StyledNavBackground
-        onClick={() => setNavState({ ...navState, sidebarState: false })}
+        onClick={() => setNavState({ sidebarState: !navState.sidebarState })}
       />
     </CSSTransition>
   );

@@ -5,6 +5,7 @@ import HeroTitle from "./HeroTitle";
 
 const StyledHero = styled.div`
   height: 100vh;
+  padding: ${(props) => props.theme.spacings.l};
 
   display: flex;
   justify-contents: center;
@@ -12,6 +13,7 @@ const StyledHero = styled.div`
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     width: 100%;
+    padding: 0;
     display: block;
     position: relative;
   }

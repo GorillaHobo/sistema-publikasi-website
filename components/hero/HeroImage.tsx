@@ -5,6 +5,7 @@ import Image from "next/image";
 const StyledHeroImage = styled.div`
   position: relative;
   width: 50%;
+  background-color: white;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     width: 100%;
