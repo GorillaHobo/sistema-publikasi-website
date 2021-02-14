@@ -14,13 +14,15 @@ export const theme: ITheme = {
     main: `Open Sans, sans-serif`,
   },
   spacings: {
-    xxSmall: ".25rem",
-    xSmall: ".5rem",
-    small: "1rem",
-    medium: "2rem",
-    large: "3rem",
-    xLarge: "4rem",
-    xxLarge: "6rem",
+    xxxsm: "0.125rem",
+    xxsm: ".25rem",
+    xsm: ".5rem",
+    sm: "1rem",
+    md: "2rem",
+    l: "3rem",
+    xl: "4rem",
+    xxl: "6rem",
+    xxxl: "8rem",
   },
   colors: {
     yellow: yellow,
@@ -41,5 +43,46 @@ export const theme: ITheme = {
   breakpoints: {
     mobile: "only screen and (max-width: 768px)",
     tablet: "only screen and (max-width: 1000px)",
+  },
+  speed: {
+    slow: "500ms",
+    medium: "300ms",
+    fast: "200ms",
+  },
+  transition: {
+    fade: `  &.fade-enter {
+                opacity: 0;
+              }
+              &.fade-enter-active {
+                opacity: 1;
+                transition: opacity ease 500ms;
+              }
+              &.fade-exit {
+                opacity: 1;
+              }
+              &.fade-exit-active {
+                opacity: 0;
+                transition: opacity ease 500ms;
+              }
+          `,
+    slide: `  &.fade-enter {
+                opacity: 0;
+                transform: translateX(-300px);
+              }
+              &.fade-enter-active {
+                opacity: 1;
+                transform: translateX(0px);
+                transition: transform ease 500ms, opacity ease 500ms;
+              }
+              &.fade-exit {
+                opacity: 1;
+                transform: translateX(0px);
+              }
+              &.fade-exit-active {
+                opacity: 0;
+                transform: translateX(-300px);
+                transition: transform ease 500ms, opacity ease 500ms;
+              }
+          `,
   },
 };

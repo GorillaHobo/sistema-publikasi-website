@@ -2,8 +2,8 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 
 const StyledButtonNormal = styled.button`
-  padding: ${(props) => props.theme.spacings.xSmall}
-    ${(props) => props.theme.spacings.small};
+  padding: ${(props) => props.theme.spacings.xs}
+    ${(props) => props.theme.spacings.sm};
 
   font-weight: 700;
 

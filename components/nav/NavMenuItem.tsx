@@ -3,10 +3,12 @@ import { INavMenuItem } from "./Nav";
 import styled from "@emotion/styled";
 
 const StyledNavMenuItem = styled.li`
-  padding: ${(props) => props.theme.spacings.xSmall}
-    ${(props) => props.theme.spacings.small};
+  padding: ${(props) => props.theme.spacings.xsm}
+    ${(props) => props.theme.spacings.sm};
 
   font-weight: 700;
+
+  transition: background-color ease 200ms, color ease 200ms;
   &.border {
     background-color: ${(props) => props.theme.colors.white};
     color: ${(props) => props.theme.colors.blue};

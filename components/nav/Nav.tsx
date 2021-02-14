@@ -5,6 +5,8 @@ import NavMenu from "./NavMenu";
 import NavSignUp from "./NavSignUp";
 import NavIcon from "./NavIcon";
 import NavHamburger from "./NavHamburger";
+import NavSidebar from "./NavSidebar";
+import NavBackground from "./NavBackground";
 
 export interface INavMenuItem {
   name: string;
@@ -28,15 +30,13 @@ const navMenuItems: INavMenuItem[] = [
 
 const StyledNav = styled.nav<{ navPosition: boolean }>`
   height: ${(props) =>
-    props.navPosition
-      ? props.theme.spacings.xLarge
-      : props.theme.spacings.xxLarge};
+    props.navPosition ? props.theme.spacings.xl : props.theme.spacings.xxl};
 
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.black};
   box-shadow: ${(props) => props.navPosition && props.theme.shadows.large};
 
-  padding: 0 ${(props) => props.theme.spacings.medium};
+  padding: 0 ${(props) => props.theme.spacings.md};
 
   display: flex;
   justify-content: space-between;
@@ -70,12 +70,16 @@ const Nav = () => {
   }, [onScroll]);
 
   return (
-    <StyledNav navPosition={navPosition}>
-      <NavMenu navMenuItems={navMenuItems} />
-      <NavHamburger />
-      <NavIcon />
-      <NavSignUp />
-    </StyledNav>
+    <>
+      <StyledNav navPosition={navPosition}>
+        <NavMenu navMenuItems={navMenuItems} />
+        <NavHamburger />
+        <NavIcon />
+        <NavSignUp />
+      </StyledNav>
+      <NavSidebar navMenuItems={navMenuItems} />
+      <NavBackground />
+    </>
   );
 };
 

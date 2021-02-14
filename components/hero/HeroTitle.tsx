@@ -7,7 +7,7 @@ const StyledHeroTitle = styled.div`
   color: ${(props) => props.theme.colors.black};
 
   width: 50%;
-  padding: ${(props) => props.theme.spacings.xLarge};
+  padding: ${(props) => props.theme.spacings.xl};
 
   display: flex;
   flex-direction: column;

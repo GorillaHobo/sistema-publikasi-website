@@ -15,13 +15,15 @@ export interface ITheme {
     main: string;
   };
   spacings: {
-    xxSmall: string;
-    xSmall: string;
-    small: string;
-    medium: string;
-    large: string;
-    xLarge: string;
-    xxLarge: string;
+    xxxsm: string;
+    xxsm: string;
+    xsm: string;
+    sm: string;
+    md: string;
+    l: string;
+    xl: string;
+    xxl: string;
+    xxxl: string;
   };
   shadows: {
     small: string;
@@ -31,6 +33,15 @@ export interface ITheme {
   breakpoints: {
     mobile: string;
     tablet: string;
+  };
+  speed: {
+    slow: string;
+    medium: string;
+    fast: string;
+  };
+  transition: {
+    fade: string;
+    slide: string;
   };
 }
 

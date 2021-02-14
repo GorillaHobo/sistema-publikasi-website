@@ -1,13 +1,13 @@
 import Nav from "../components/nav/Nav";
 import Hero from "../components/hero/Hero";
-import Carousel from "../components/journal/JournalCarousel";
+import Journal from "../components/journal/Journal";
 
 const Home = () => {
   return (
-    <main>
+    <main style={{ position: "relative" }}>
       <Nav />
       <Hero />
-      <Carousel />
+      <Journal />
     </main>
   );
 };

@@ -8,7 +8,7 @@ const StyledNavIcon = styled.div`
   align-items: center;
 
   & h2 {
-    margin-right: ${(props) => props.theme.spacings.small};
+    margin-right: ${(props) => props.theme.spacings.sm};
   }
 `;
 

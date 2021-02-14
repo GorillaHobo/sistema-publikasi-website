@@ -1,33 +1,55 @@
 import styled from "@emotion/styled";
 import { useNavbarState } from "../../contexts/GlobalContext";
+import { CSSTransition } from "react-transition-group";
 
-const StyledNavBackground = styled.div<{ navState: { sidebarState: boolean } }>`
+const StyledNavBackground = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  background-color: ${(props) => props.theme.colors.black};
+  opacity: 0.7;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
   z-index: 99;
 
-  opacity: 0;
-  transition: all ease 500ms;
+  display: none;
+  &:hover {
+    cursor: pointer;
+  }
 
-  display: ${(props) => (props.navState.sidebarState ? "block" : "none")};
-  @media (max-width: 1000px) {
-    opacity: ${(props) => props.navState.sidebarState && "1"};
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    display: block;
+  }
+
+  &.fade-enter {
+    opacity: 0;
+  }
+  &.fade-enter-active {
+    opacity: 0.7;
+    transition: opacity ease-in-out ${(props) => props.theme.speed.slow};
+  }
+  &.fade-exit {
+    opacity: 0.7;
+  }
+  &.fade-exit-active {
+    opacity: 0;
+    transition: opacity ease-in-out ${(props) => props.theme.speed.slow};
   }
 `;
 
 const NavBackground = () => {
   const { navState, setNavState } = useNavbarState();
+
   return (
-    <StyledNavBackground
-      navState={navState}
-      onClick={() => setNavState({ ...navState, sidebarState: false })}
-    />
+    <CSSTransition
+      in={navState.sidebarState}
+      timeout={500}
+      classNames="fade"
+      unmountOnExit
+    >
+      <StyledNavBackground
+        onClick={() => setNavState({ ...navState, sidebarState: false })}
+      />
+    </CSSTransition>
   );
 };
 
