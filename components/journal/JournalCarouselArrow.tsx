@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useJournalContext } from "../../contexts/JournalContext";
+
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 
 const StyledJournalCarouselArrow = styled.div`
@@ -17,21 +19,22 @@ const StyledJournalCarouselArrow = styled.div`
     right: 5%;
   }
 
+  transition: color ease 200ms;
   &:hover {
     cursor: pointer;
+    color: ${(props) => props.theme.colors.white};
   }
 `;
 
-const JournalCarouselArrow = ({
-  isRight = false,
-  onClick,
-}: {
-  isRight?: boolean;
-  onClick?: () => void;
-}) => {
+const JournalCarouselArrow = ({ isRight = false }: { isRight?: boolean }) => {
+  const { journalDispatch } = useJournalContext();
   return (
     <StyledJournalCarouselArrow
-      onClick={onClick}
+      onClick={
+        isRight
+          ? () => journalDispatch({ type: "NEXT_IMAGE" })
+          : () => ({ type: "PREV_IMAGE" })
+      }
       className={isRight ? "right" : "left"}
     >
       {isRight ? <AiOutlineRight /> : <AiOutlineLeft />}

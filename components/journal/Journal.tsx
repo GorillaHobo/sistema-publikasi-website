@@ -1,45 +1,43 @@
-import {
-  JournalProvider,
-  useJournalContext,
-} from "../../contexts/JournalContext";
+import { JournalProvider } from "../../contexts/JournalContext";
 import styled from "@emotion/styled";
+import JournalInfo from "./JournalInfo";
+import JournalCarouselImages from "./JournalCarouselImages";
+import JournalFull from "./JournalFull";
 
 const StyledJournal = styled.div`
   height: 100vh;
   padding: ${(props) => props.theme.spacings.md};
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  & h1 {
+    text-align: center;
+    color: red;
+  }
+`;
+const StyledTitle = styled.div`
+  text-align: center;
+  padding: 0 2rem;
 `;
 
-const Testing = () => {
-  const { journalState, journalDispatch } = useJournalContext();
+const Title = () => {
   return (
-    <div>
-      <h1>{journalState.currentImage}</h1>
-      <button
-        onClick={() =>
-          journalDispatch({ type: "SET_CURRENT_IMAGE", payload: 1 })
-        }
-      >
-        set to 1
-      </button>
-      <button onClick={() => journalDispatch({ type: "PREV_IMAGE" })}>
-        Prev
-      </button>
-      <button onClick={() => journalDispatch({ type: "NEXT_IMAGE" })}>
-        Next
-      </button>
-    </div>
+    <StyledTitle>
+      <h1>Publised Journals</h1>
+      <hr />
+    </StyledTitle>
   );
 };
 
 const Journal = () => {
   return (
     <JournalProvider>
+      <Title />
       <StyledJournal>
-        <Testing />
+        <JournalCarouselImages />
+        <JournalInfo />
       </StyledJournal>
+      <JournalFull />
     </JournalProvider>
   );
 };

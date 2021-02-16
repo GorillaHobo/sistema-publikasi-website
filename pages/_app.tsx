@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           body {
             padding: 0;
             margin: 0;
-            font-family: "Jost*", -apple-system, BlinkMacSystemFont, Segoe UI,
-              Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+            font-family: "Fira Sans", "Jost*", -apple-system, BlinkMacSystemFont,
+              Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
               Helvetica Neue, sans-serif;
           }
           a {
@@ -22,6 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           }
           * {
             box-sizing: border-box;
+          }
+          h1 {
+            font-size: 1.75rem;
           }
           ul {
             padding: 0;

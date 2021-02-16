@@ -1,5 +1,19 @@
 import styled from "@emotion/styled";
-import { useJournalState } from "../../contexts/JournalContext";
+import { useJournalContext } from "../../contexts/JournalContext";
+
+const StyledJournalCarouselDot = styled.div`
+  margin: 8px 0 0 0;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Dot = styled.div`
   background-color: ${(props) => props.theme.colors.blackLight};
 
@@ -18,30 +32,20 @@ const Dot = styled.div`
   }
 `;
 
-const StyledJournalCarouselDot = styled.div`
-  margin: 8px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const JournalCarouselDot = ({
-  length,
-  current,
-  selectCurrentImage,
-}: {
-  length: number;
-  current: number;
-  selectCurrentImage?: (newCurrent: number) => void;
-}) => {
-  const arr: number[] = [...Array(length + 1)];
+const JournalCarouselDot = () => {
+  const { journalState, journalDispatch } = useJournalContext();
+  const { currentImage, journals } = journalState;
+  const arr = [...Array(journals.length)];
 
   return (
     <StyledJournalCarouselDot>
-      {arr.map((i, index) => (
+      {arr.map((_, index) => (
         <Dot
-          className={current === index ? "current" : ""}
-          onClick={() => selectCurrentImage(index)}
+          className={currentImage === index ? "current" : ""}
+          onClick={() =>
+            journalDispatch({ type: "SET_CURRENT_IMAGE", payload: index })
+          }
+          key={index}
         />
       ))}
     </StyledJournalCarouselDot>

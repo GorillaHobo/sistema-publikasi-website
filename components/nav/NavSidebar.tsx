@@ -15,9 +15,10 @@ const StyledNavSidebar = styled.ul`
   display: none;
 
   position: fixed;
+  left: 0;
   bottom: 0;
   top: 60px;
-  z-index: 1001;
+  z-index: 1000;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     display: flex;

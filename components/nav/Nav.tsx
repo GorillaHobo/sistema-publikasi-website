@@ -72,14 +72,14 @@ const Nav = () => {
 
   return (
     <NavProvider>
+      <NavBackground />
       <StyledNav navPosition={navPosition}>
         <NavMenu navMenuItems={navMenuItems} />
         <NavHamburger />
         <NavIcon />
         <NavSignUp />
+        <NavSidebar navMenuItems={navMenuItems} />
       </StyledNav>
-      <NavSidebar navMenuItems={navMenuItems} />
-      <NavBackground />
     </NavProvider>
   );
 };

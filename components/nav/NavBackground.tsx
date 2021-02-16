@@ -3,13 +3,16 @@ import { useNavState } from "../../contexts/NavContext";
 import { CSSTransition } from "react-transition-group";
 
 const StyledNavBackground = styled.div`
-  height: 100vh;
-  width: 100vw;
   background-color: ${(props) => props.theme.colors.black};
   opacity: 0.7;
 
   position: fixed;
-  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 50;
 
   display: none;
   &:hover {

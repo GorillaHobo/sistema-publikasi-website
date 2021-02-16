@@ -1,20 +1,24 @@
 import styled from "@emotion/styled";
+import { useJournalContext } from "../../contexts/JournalContext";
 
 const StyledJournalInfo = styled.div`
+  flex: 2;
+
   height: 100%;
-  width: 50%;
   padding: ${(props) => props.theme.spacings.xl};
 
   & h1 {
     text-align: center;
   }
+  & p {
+    text-align: left;
+  }
 
   & div {
     width: 100%;
 
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
 
     & span {
       font-weight: bold;
@@ -23,23 +27,27 @@ const StyledJournalInfo = styled.div`
 `;
 
 const JournalInfo = () => {
+  const { journalState } = useJournalContext();
+  const { journals, currentImage } = journalState;
+  const currentJournal = journals[currentImage];
   return (
     <StyledJournalInfo>
-      <h1>Published Journals</h1>
-      <hr />
       <div>
         <p>
           <span>Title:</span>
+          <br />
+          {currentJournal.title}
         </p>
-        <p>Phasellus neque orci, porta a, aliquet quis, semper a, massa. </p>
         <p>
           <span>Author:</span>
+          <br />
+          {currentJournal.author}
         </p>
-        <p>Galih Wicaksono</p>
         <p>
           <span>Year:</span>
+          <br />
+          {currentJournal.date}
         </p>
-        <p>2020</p>
       </div>
     </StyledJournalInfo>
   );
