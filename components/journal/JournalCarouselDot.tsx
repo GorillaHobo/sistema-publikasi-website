@@ -16,7 +16,6 @@ const StyledJournalCarouselDot = styled.div`
 
 const Dot = styled.div`
   background-color: ${(props) => props.theme.colors.black};
-  border: 2px solid ${(props) => props.theme.colors.white};
 
   height: 12px;
   width: 12px;
@@ -25,7 +24,7 @@ const Dot = styled.div`
   border-radius: 50%;
 
   &.current {
-    background-color: ${(props) => props.theme.colors.white};
+    background-color: ${(props) => props.theme.colors.whiteDark};
   }
 
   &:hover {

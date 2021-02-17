@@ -8,13 +8,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Global
         styles={css`
+          @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
           html,
           body {
             padding: 0;
             margin: 0;
-            font-family: "Fira Sans", "Jost*", -apple-system, BlinkMacSystemFont,
-              Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+            font-family: Fira Sans, -apple-system, BlinkMacSystemFont, Segoe UI,
+              Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
               Helvetica Neue, sans-serif;
+            color: #282828;
           }
           a {
             color: inherit;

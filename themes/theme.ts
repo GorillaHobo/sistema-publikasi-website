@@ -32,7 +32,7 @@ export const theme = {
     blackLight: blackLight,
     white: white,
     blue: blue,
-    whiteDark: "#DDDDDD",
+    whiteDark: "#BBB",
   },
   shadows: {
     small: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",

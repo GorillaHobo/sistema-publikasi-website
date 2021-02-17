@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 
 const StyledTitle = styled.div`
+  margin-top: 5rem;
   text-align: center;
   & h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
     margin: 0;
   }
 
@@ -11,6 +12,12 @@ const StyledTitle = styled.div`
     & h1 {
       font-size: 3rem;
       margin-top: 2rem;
+    }
+  }
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    & h1 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
     }
   }
 `;

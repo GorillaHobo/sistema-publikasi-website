@@ -19,6 +19,7 @@ const StyledJournal = styled.div`
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     flex-direction: column;
+    padding: ${(props) => props.theme.spacings.sm};
   }
 `;
 
