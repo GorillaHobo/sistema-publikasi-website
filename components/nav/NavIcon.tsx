@@ -9,6 +9,8 @@ const StyledNavIcon = styled.div`
 
   user-select: none;
 
+  align-self: center;
+
   & h2 {
     margin-right: ${(props) => props.theme.spacings.sm};
   }

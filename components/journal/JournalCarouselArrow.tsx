@@ -40,7 +40,7 @@ const JournalCarouselArrow = ({ isRight = false }: { isRight?: boolean }) => {
       onClick={
         isRight
           ? () => journalDispatch({ type: "NEXT_IMAGE" })
-          : () => ({ type: "PREV_IMAGE" })
+          : () => journalDispatch({ type: "PREV_IMAGE" })
       }
       className={isRight ? "right" : "left"}
     >
