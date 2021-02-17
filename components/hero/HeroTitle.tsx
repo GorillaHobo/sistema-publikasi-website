@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 
-import ButtonNormal from "../buttons/ButtonNormal";
-
 const StyledHeroTitle = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.black};
