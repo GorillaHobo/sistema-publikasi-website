@@ -1,17 +1,14 @@
 import styled from "@emotion/styled";
 
 const StyledLayout = styled.main`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 1366px;
+  margin: 0 auto;
+
+  position: relative;
 `;
 
 const Layout = ({ children }) => {
-  return (
-    <StyledLayout>
-      <main>{children}</main>
-    </StyledLayout>
-  );
+  return <StyledLayout>{children}</StyledLayout>;
 };
 
 export default Layout;

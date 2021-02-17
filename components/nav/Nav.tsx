@@ -20,6 +20,10 @@ const navMenuItems: INavMenuItem[] = [
     href: "/",
   },
   {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
     name: "About",
     href: "/about",
   },
@@ -50,6 +54,10 @@ const StyledNav = styled.nav<{ navPosition: boolean }>`
   z-index: 100;
 
   transition: all ease 500ms;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    padding: 0 ${(props) => props.theme.spacings.sm};
+  }
 `;
 
 const Nav = () => {

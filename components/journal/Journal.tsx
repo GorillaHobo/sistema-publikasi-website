@@ -1,8 +1,9 @@
 import { JournalProvider } from "../../contexts/JournalContext";
 import styled from "@emotion/styled";
+
+import SectionTitle from "../SectionTitle";
 import JournalInfo from "./JournalInfo";
 import JournalCarouselImages from "./JournalCarouselImages";
-import JournalFull from "./JournalFull";
 
 const StyledJournal = styled.div`
   height: 100vh;
@@ -13,31 +14,22 @@ const StyledJournal = styled.div`
   & h1 {
     text-align: center;
     color: red;
+    text-decoration: underline;
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    flex-direction: column;
   }
 `;
-const StyledTitle = styled.div`
-  text-align: center;
-  padding: 0 2rem;
-`;
-
-const Title = () => {
-  return (
-    <StyledTitle>
-      <h1>Publised Journals</h1>
-      <hr />
-    </StyledTitle>
-  );
-};
 
 const Journal = () => {
   return (
     <JournalProvider>
-      <Title />
+      <SectionTitle title="Published Journals" />
       <StyledJournal>
         <JournalCarouselImages />
         <JournalInfo />
       </StyledJournal>
-      <JournalFull />
     </JournalProvider>
   );
 };

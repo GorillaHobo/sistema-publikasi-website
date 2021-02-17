@@ -7,7 +7,7 @@ const StyledJournalCarouselArrow = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: 3rem;
   user-select: none;
-  z-index: 100;
+  z-index: 80;
 
   position: absolute;
   top: 48%;
@@ -23,6 +23,10 @@ const StyledJournalCarouselArrow = styled.div`
   &:hover {
     cursor: pointer;
     color: ${(props) => props.theme.colors.white};
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    top: 50%;
   }
 `;
 

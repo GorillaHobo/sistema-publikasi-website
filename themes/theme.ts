@@ -1,5 +1,3 @@
-import { ITheme } from "../emotion";
-
 const red: string = "#cc241d";
 const green: string = "#98971a";
 const yellow: string = "#d79921";
@@ -9,7 +7,7 @@ const black: string = "hsl(0, 0%, 16%)";
 const blackLight: string = "hsl(0, 0%, 30%)";
 const white: string = "#FFFFFF";
 
-export const theme: ITheme = {
+export const theme = {
   fonts: {
     title: "Alfa Slab One, serif",
     main: `Open Sans, sans-serif`,
@@ -34,6 +32,7 @@ export const theme: ITheme = {
     blackLight: blackLight,
     white: white,
     blue: blue,
+    whiteDark: "#DDDDDD",
   },
   shadows: {
     small: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",

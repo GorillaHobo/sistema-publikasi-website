@@ -5,6 +5,8 @@ const StyledServicesImage = styled.div`
   padding: 2rem;
   min-width: 300px;
 
+  overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;

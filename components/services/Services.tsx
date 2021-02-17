@@ -2,14 +2,12 @@ import styled from "@emotion/styled";
 import { servicesState } from "../../contexts/servicesState";
 
 import ServicesCard from "./ServicesCard";
+import SectionTitle from "../SectionTitle";
 
-const StyledServices = styled.section`
+const StyledServices = styled.div`
   padding: ${(props) => props.theme.spacings.l};
 
-  & h1 {
-    text-align: center;
-  }
-  @media ${(props) => props.theme.breakpoints.mobile} {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     padding: ${(props) => props.theme.spacings.sm};
   }
 `;
@@ -17,8 +15,7 @@ const StyledServices = styled.section`
 const Services = () => {
   return (
     <StyledServices>
-      <h1>Our Services</h1>
-      <hr />
+      <SectionTitle title={"Services"} />
       {servicesState.map((service, index) => (
         <ServicesCard service={service} key={index} />
       ))}

@@ -17,7 +17,7 @@ const StyledNavSidebar = styled.ul`
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 60px;
+  top: 59px;
   z-index: 1000;
 
   @media ${(props) => props.theme.breakpoints.tablet} {

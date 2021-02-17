@@ -5,7 +5,7 @@ const StyledJournalCarouselDot = styled.div`
   margin: 8px 0 0 0;
 
   position: absolute;
-  bottom: 1rem;
+  bottom: 3rem;
   left: 0;
   right: 0;
 
@@ -15,7 +15,8 @@ const StyledJournalCarouselDot = styled.div`
 `;
 
 const Dot = styled.div`
-  background-color: ${(props) => props.theme.colors.blackLight};
+  background-color: ${(props) => props.theme.colors.black};
+  border: 2px solid ${(props) => props.theme.colors.white};
 
   height: 12px;
   width: 12px;

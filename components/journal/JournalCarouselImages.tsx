@@ -17,6 +17,10 @@ const StyledJournalCarouselImages = styled.div`
   flex: 7;
 
   user-select: none;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    width: 100%;
+  }
 `;
 
 const JournalCarouselImages = () => {

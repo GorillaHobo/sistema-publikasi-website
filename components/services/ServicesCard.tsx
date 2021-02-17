@@ -13,7 +13,11 @@ const StyledServicesCard = styled.section`
 
   display: flex;
 
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    padding: 1.5rem;
+  }
   @media ${(props) => props.theme.breakpoints.mobile} {
+    padding: 1rem;
     flex-direction: column-reverse;
   }
 `;

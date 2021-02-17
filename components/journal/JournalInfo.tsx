@@ -7,9 +7,6 @@ const StyledJournalInfo = styled.div`
   height: 100%;
   padding: ${(props) => props.theme.spacings.xl};
 
-  & h1 {
-    text-align: center;
-  }
   & p {
     text-align: left;
   }
@@ -22,6 +19,17 @@ const StyledJournalInfo = styled.div`
 
     & span {
       font-weight: bold;
+      color: ${(props) => props.theme.colors.blackLight};
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    padding: 1rem;
+    width: 100%;
+    & div {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 `;
