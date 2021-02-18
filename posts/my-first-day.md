@@ -1,6 +1,7 @@
 ---
 title: First Day
 description: idk
+coverImage: /einstein.jpeg
 ---
 
 # test
