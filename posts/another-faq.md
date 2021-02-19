@@ -1,10 +1,10 @@
 ---
 title: FAQ
-description: "Frequently Asked Questions"
-date: "January 20th, 2021"
-author: "Galih Wicaksono"
-excerpt: "This is my first blog post"
-coverImage: "/pirlo.jpeg"
+description: Frequently Asked Questions
+author: Galih Wicaksono
+excerpt: This is my first blog post
+coverImage: /pirlo.jpeg
+date: "2020-10-30"
 ---
 
 ## What keyboard do you use?

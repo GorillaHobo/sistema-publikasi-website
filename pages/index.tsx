@@ -5,12 +5,12 @@ import Nav from "../components/nav/Nav";
 import Hero from "../components/hero/Hero";
 import Journal from "../components/journal/Journal";
 import Services from "../components/services/Services";
-import Footer from "../components/footer/Footer";
 import Testimony from "../components/testimony/Testimony";
 import Contact from "../components/contact/Contact";
 import BlogCards from "../components/blog/BlogCards";
+import Footer from "../components/footer/Footer";
 
-import { getAllPosts } from "../lib/api";
+import { getLatestPosts } from "../lib/api";
 
 const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
@@ -20,8 +20,7 @@ const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Journal />
       <Services />
       <Testimony />
-      <BlogCards posts={allPosts} />
-      <Contact />
+      <BlogCards posts={allPosts} title="Latest Articles" />
       <Footer />
     </Layout>
   );
@@ -29,15 +28,16 @@ const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const fields: string[] = [
     "title",
     "date",
     "slug",
     "author",
     "coverImage",
     "excerpt",
-  ]);
-
+  ];
+  const number: number = 2;
+  const allPosts = getLatestPosts(fields, number);
   return {
     props: { allPosts },
   };

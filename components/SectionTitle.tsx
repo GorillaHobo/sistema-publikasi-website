@@ -1,11 +1,15 @@
 import styled from "@emotion/styled";
 
-const StyledTitle = styled.div`
-  margin-top: 5rem;
+const StyledTitle = styled.div<{ isBlog?: boolean }>`
+  margin-top: 4rem;
   text-align: center;
   & h1 {
     font-size: 3.6rem;
     margin: 0;
+  }
+
+  &.isBlog {
+    margin-top: 8rem;
   }
 
   @media ${(props) => props.theme.breakpoints.tablet} {
@@ -22,9 +26,15 @@ const StyledTitle = styled.div`
   }
 `;
 
-const SectionTitle = ({ title }: { title: string }) => {
+const SectionTitle = ({
+  title,
+  isBlog = false,
+}: {
+  title: string;
+  isBlog?: boolean;
+}) => {
   return (
-    <StyledTitle>
+    <StyledTitle title={title} className={isBlog ? "isBlog" : ""}>
       <h1>{title}</h1>
     </StyledTitle>
   );

@@ -1,7 +1,9 @@
 ---
 title: First Day
-description: idk
+description: This is my first day of school
 coverImage: /einstein.jpeg
+author: Albert Einstein
+date: "2019-01-15"
 ---
 
 # test

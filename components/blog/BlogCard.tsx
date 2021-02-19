@@ -49,6 +49,7 @@ const StyledBlogCard = styled.div`
   @media ${(props) => props.theme.breakpoints.tablet} {
     width: 100%;
     height: 500px;
+    margin-bottom: 1rem;
     & h1 {
       font-size: 1.5rem;
     }
@@ -62,13 +63,13 @@ const StyledImageContainer = styled.div`
   min-height: 300px;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 1rem;
 
   position: relative;
 `;
 
 const BlogCard = ({ post }: { post: IPost; index: number }) => {
   const { title, author, date, slug, excerpt, coverImage } = post;
-  console.log(coverImage);
   return (
     <Link href={"/blog/" + slug}>
       <StyledBlogCard>

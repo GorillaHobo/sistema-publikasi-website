@@ -11,8 +11,17 @@ const StyledNavIcon = styled.div`
 
   align-self: center;
 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   & h2 {
     margin-right: ${(props) => props.theme.spacings.sm};
+  }
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    position: initial;
+    transform: translate(0, 0);
   }
 `;
 

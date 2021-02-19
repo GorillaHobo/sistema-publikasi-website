@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { INavMenuItem } from "./Nav";
 import styled from "@emotion/styled";
 
@@ -21,6 +22,11 @@ const StyledNavMenuItem = styled.li`
       border: ${(props) => props.theme.colors.blue} 2px solid;
     }
   }
+
+  &.active {
+    color: ${(props) => props.theme.colors.blue};
+  }
+
   &:hover {
     color: ${(props) => props.theme.colors.blue};
     cursor: pointer;
@@ -35,11 +41,18 @@ const NavMenuItem = ({
   item: INavMenuItem;
   border?: boolean;
 }) => {
+  const router = useRouter();
   return (
     <Link href={item.href}>
-      <StyledNavMenuItem className={border && "border"}>
-        {item.name}
-      </StyledNavMenuItem>
+      <a>
+        <StyledNavMenuItem
+          className={`${border && "border"} ${
+            item.href === router.pathname && "active"
+          }`}
+        >
+          {item.name}
+        </StyledNavMenuItem>
+      </a>
     </Link>
   );
 };

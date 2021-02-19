@@ -11,13 +11,14 @@ export interface IPost {
   author?: string;
   coverImage?: string;
   excerpt?: string;
+  content?: string;
 }
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory);
 }
 
-export function getPostBySlug(slug: string, fields = []) {
+export function getPostBySlug(slug: string, fields = []): IPost {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -45,7 +46,20 @@ export function getPostBySlug(slug: string, fields = []) {
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   console.log("slugs: ", slugs);
-  const posts: IPost[] = slugs.map((slug) => getPostBySlug(slug, fields));
+  const posts: IPost[] = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    .sort((post1: IPost, post2: IPost) => (post1.date > post2.date ? -1 : 1));
   // sort posts by date in descending order
   return posts;
+}
+
+export function getLatestPosts(fields = [], number: number) {
+  const slugs = getPostSlugs();
+  console.log("slugs: ", slugs);
+  const posts: IPost[] = slugs
+    .map((slug) => getPostBySlug(slug, fields))
+    .sort((post1: IPost, post2: IPost) => (post1.date > post2.date ? -1 : 1));
+  // sort posts by date in descending order
+  const slicedPosts = posts.slice(0, number);
+  return slicedPosts;
 }
