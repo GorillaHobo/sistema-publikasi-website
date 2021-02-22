@@ -5,7 +5,7 @@ import ServicesCard from "./ServicesCard";
 import SectionTitle from "../SectionTitle";
 
 const StyledServices = styled.div`
-  padding: ${(props) => props.theme.spacings.l};
+  padding: ${(props) => props.theme.spacings.md};
 
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: ${(props) => props.theme.spacings.sm};

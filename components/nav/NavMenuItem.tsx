@@ -9,7 +9,8 @@ const StyledNavMenuItem = styled.li`
 
   font-weight: 700;
 
-  transition: background-color ease 200ms, color ease 200ms;
+  transition: background-color ease ${(props) =>
+    props.theme.speed.fast};, color ease ${(props) => props.theme.speed.fast};;
   &.border {
     background-color: ${(props) => props.theme.colors.white};
     color: ${(props) => props.theme.colors.blue};

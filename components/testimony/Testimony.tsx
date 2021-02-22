@@ -12,7 +12,7 @@ const Testimony = () => {
   return (
     <TestimonyProvider>
       <StyledTestimony>
-        <SectionTitle title="Testimonies" />
+        <SectionTitle title="Testimonies" margin="large" />
         <TestimonyCard />
       </StyledTestimony>
     </TestimonyProvider>

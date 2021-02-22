@@ -32,6 +32,7 @@ export const theme = {
     blackLight: blackLight,
     white: white,
     blue: blue,
+    blueLight: "#569699",
     whiteDark: "#BBB",
   },
   shadows: {
@@ -55,15 +56,17 @@ export const theme = {
                 opacity: 0;
               }
               &.fade-enter-active {
-                opacity: 1;
-                transition: opacity ease 200ms;
+                opacity: 0.7;
               }
               &.fade-exit {
-                opacity: 1;
+                opacity: 0.7;
               }
               &.fade-exit-active {
                 opacity: 0;
-                transition: opacity ease 200ms;
+              }
+
+              &.fade-enter-active, &.fade-exit-active {
+                transition: opacity ease 500ms;
               }
           `,
     slide: `  &.fade-enter {
@@ -73,7 +76,6 @@ export const theme = {
               &.fade-enter-active {
                 opacity: 1;
                 transform: translateX(0px);
-                transition: transform ease 500ms, opacity ease 500ms;
               }
               &.fade-exit {
                 opacity: 1;
@@ -82,6 +84,8 @@ export const theme = {
               &.fade-exit-active {
                 opacity: 0;
                 transform: translateX(-300px);
+              }
+              &.fade-exit-active, &.fade-enter-active{
                 transition: transform ease 500ms, opacity ease 500ms;
               }
           `,

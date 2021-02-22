@@ -14,7 +14,7 @@ const StyledJournalCarouselImages = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 7;
+  flex: 5;
 
   user-select: none;
 

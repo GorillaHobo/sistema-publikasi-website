@@ -1,8 +1,23 @@
 import styled from "@emotion/styled";
 
-const StyledTitle = styled.div<{ isBlog?: boolean }>`
+type IMargin = "none" | "medium" | "large";
+
+const StyledTitle = styled.div`
   margin-top: 4rem;
   text-align: center;
+
+  &.none {
+    margin-top: 0;
+  }
+
+  &.medium {
+    margin-top: 2;
+  }
+
+  &.large {
+    margin-top: 4;
+  }
+
   & h1 {
     font-size: 3.6rem;
     margin: 0;
@@ -28,13 +43,13 @@ const StyledTitle = styled.div<{ isBlog?: boolean }>`
 
 const SectionTitle = ({
   title,
-  isBlog = false,
+  margin = "none",
 }: {
   title: string;
-  isBlog?: boolean;
+  margin?: IMargin;
 }) => {
   return (
-    <StyledTitle title={title} className={isBlog ? "isBlog" : ""}>
+    <StyledTitle className={margin}>
       <h1>{title}</h1>
     </StyledTitle>
   );

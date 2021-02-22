@@ -1,18 +1,23 @@
 import styled from "@emotion/styled";
 import { useJournalContext } from "../../contexts/JournalContext";
 
+import SectionTitle from "../SectionTitle";
+import Button from "../Button";
+
 const StyledJournalInfo = styled.div`
   flex: 2;
 
   height: 100%;
-  padding: ${(props) => props.theme.spacings.xl};
+  padding: 0 ${(props) => props.theme.spacings.xl};
 
   & p {
     text-align: left;
+    margin: 0 0 1rem 0;
   }
 
   & div {
     width: 100%;
+    margin-top: ${(props) => props.theme.spacings.l};
 
     display: flex;
     flex-direction: column;
@@ -38,25 +43,23 @@ const JournalInfo = () => {
   const { journalState } = useJournalContext();
   const { journals, currentImage } = journalState;
   const currentJournal = journals[currentImage];
+  const { date, href, title } = currentJournal;
   return (
     <StyledJournalInfo>
+      <SectionTitle title="Published Journals" margin="none" />
       <div>
         <p>
           <span>Title:</span>
           <br />
-          {currentJournal.title}
-        </p>
-        <p>
-          <span>Author:</span>
-          <br />
-          {currentJournal.author}
+          {title}
         </p>
         <p>
           <span>Year:</span>
           <br />
-          {currentJournal.date}
+          {date}
         </p>
       </div>
+      <Button name="Go to link" href={href} icon="arrow" shadow />
     </StyledJournalInfo>
   );
 };

@@ -38,7 +38,7 @@ const BlogCards = ({
 }) => {
   return (
     <StyledArticles>
-      <SectionTitle title={title} isBlog />
+      <SectionTitle title={title} margin="large" />
       <StyledBlogCards>
         {posts.map((post, index) => (
           <BlogCard key={index} index={index} post={post} />

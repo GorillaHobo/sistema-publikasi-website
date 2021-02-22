@@ -1,49 +1,50 @@
 import styled from "@emotion/styled";
 
 const StyledHeroTitle = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
-  color: ${(props) => props.theme.colors.black};
-
-  width: 50%;
-  padding: ${(props) => props.theme.spacings.xl};
+  color: white;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  & span {
-    color: ${(props) => props.theme.colors.blackLight};
-  }
+  max-width: 350px;
+  margin: auto;
+  margin-bottom: ${(props) => props.theme.spacings.xl};
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   @media ${(props) => props.theme.breakpoints.tablet} {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(40, 40, 40, 0.5);
-    z-index: 10;
-    & span {
-      color: ${(props) => props.theme.colors.white};
-    }
+    margin-bottom: 0;
+  }
+`;
+
+const Title = styled.span`
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    font-size: 4rem;
+  }
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    font-size: 3rem;
   }
 `;
 
 const HeroTitle = () => {
   return (
     <StyledHeroTitle>
-      <h1>Hello World!</h1>
+      <Title>Hello World</Title>
       <p>
-        <span>
-          Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
-          facilisis facilisis, est dui fermentum leo, quis tempor ligula erat
-          quis odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede.
-          Sed bibendum. Aliquam posuere. Nunc aliquet, augue nec adipiscing
-          interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
-        </span>
+        Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
+        facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
+        lacus tellus malesuada massa, quis varius mi purus non odio.
       </p>
     </StyledHeroTitle>
   );

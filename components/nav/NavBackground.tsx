@@ -23,20 +23,7 @@ const StyledNavBackground = styled.div`
     display: block;
   }
 
-  &.fade-enter {
-    opacity: 0;
-  }
-  &.fade-enter-active {
-    opacity: 0.7;
-    transition: opacity ease-in-out ${(props) => props.theme.speed.slow};
-  }
-  &.fade-exit {
-    opacity: 0.7;
-  }
-  &.fade-exit-active {
-    opacity: 0;
-    transition: opacity ease-in-out ${(props) => props.theme.speed.slow};
-  }
+  ${(props) => props.theme.transition.fade};
 `;
 
 const NavBackground = () => {

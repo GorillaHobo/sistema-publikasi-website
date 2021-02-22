@@ -9,6 +9,7 @@ import Testimony from "../components/testimony/Testimony";
 import Contact from "../components/contact/Contact";
 import BlogCards from "../components/blog/BlogCards";
 import Footer from "../components/footer/Footer";
+import Counter from "../components/Counter";
 
 import { getLatestPosts } from "../lib/api";
 

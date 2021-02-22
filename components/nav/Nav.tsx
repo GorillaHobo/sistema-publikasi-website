@@ -53,7 +53,7 @@ const StyledNav = styled.nav<{ navPosition: boolean }>`
   top: 0;
   z-index: 100;
 
-  transition: all ease 500ms;
+  transition: all ease ${(props) => props.theme.speed.slow};
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     padding: 0 ${(props) => props.theme.spacings.sm};
