@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const StyledServicesImage = styled.div`
   padding: 2rem;
-  min-width: 300px;
+  max-width: 300px;
 
   overflow: hidden;
 

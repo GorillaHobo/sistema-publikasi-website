@@ -8,13 +8,16 @@ const StyledContact = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const Contact = () => {
   return (
     <StyledContact>
       <ContactNumber />
-      <ContactAddress />
     </StyledContact>
   );
 };

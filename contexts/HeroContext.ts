@@ -13,7 +13,7 @@ export const heroState: IHeroState = {
   index: {
     title: "Hello World",
     desc:
-      "Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. ",
+      "  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. ",
     src: "/hero.jpg",
     alt: "Index Hero Image",
   },
@@ -22,6 +22,13 @@ export const heroState: IHeroState = {
     desc:
       "Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. ",
     src: "/pirlo.jpeg",
+    alt: "About Hero Image",
+  },
+  contact: {
+    title: "Get in Touch",
+    desc:
+      "Nullam tristique diam non turpis.  Nam euismod tellus id erat.  Nullam tristique diam non turpis.  ",
+    src: "/team/ronaldo.jpg",
     alt: "About Hero Image",
   },
 };

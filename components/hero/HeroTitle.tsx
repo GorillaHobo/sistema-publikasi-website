@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, Props } from "react";
 import useLazyLoader from "../../lib/useLazyLoader";
 import styled from "@emotion/styled";
 import { heroState } from "../../contexts/HeroContext";
@@ -12,7 +12,6 @@ const StyledHeroTitle = styled.div`
   justify-content: center;
   align-items: center;
 
-  max-width: 350px;
   margin: auto;
   margin-bottom: ${(props) => props.theme.spacings.xl};
 
@@ -22,6 +21,9 @@ const StyledHeroTitle = styled.div`
   bottom: 0;
   left: 0;
 
+  & p {
+    width: 400px;
+  }
   & p,
   span {
     opacity: 0;
@@ -55,7 +57,13 @@ const Title = styled.span`
   }
 `;
 
-const HeroTitle = ({ page }: { page: "index" | "about" }) => {
+const HeroTitle: React.FC = ({
+  page,
+  children,
+}: {
+  page: string;
+  children?: React.ReactChild;
+}) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible] = useLazyLoader({ elementRef: containerRef });
   const { title, desc } = heroState[page];
@@ -63,7 +71,12 @@ const HeroTitle = ({ page }: { page: "index" | "about" }) => {
   return (
     <StyledHeroTitle ref={containerRef}>
       <Title className={isVisible && "appear"}>{title}</Title>
-      <p className={isVisible && "appear delay"}>{desc}</p>
+
+      {/* hide description only on contact page */}
+      {page !== "contact" && (
+        <p className={isVisible && "appear delay"}>{desc}</p>
+      )}
+      {children}
     </StyledHeroTitle>
   );
 };

@@ -25,7 +25,7 @@ const Overlay = styled.div`
   left: 0;
 `;
 
-const HeroImage = ({ page }: { page: "index" | "about" }) => {
+const HeroImage = ({ page }: { page: string }) => {
   const { src, alt } = heroState[page];
 
   return (
