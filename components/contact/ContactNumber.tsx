@@ -11,8 +11,20 @@ import {
 
 const StyledContacts = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+  }
 `;
 const StyledContact = styled.div`
   padding: 0.5rem;
@@ -32,6 +44,14 @@ const StyledContact = styled.div`
   & h4,
   p {
     margin-bottom: 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.tablet} {
+    width: 400px;
+    margin-top: 2rem;
+  }
+  @media ${(props) => props.theme.breakpoints.mobile} {
+    width: 100%;
   }
 `;
 const IconContainer = styled.div`

@@ -22,8 +22,6 @@ const BlogTemplate = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { coverImage } = post;
-  console.log(post);
-  console.log(coverImage);
   return (
     <Layout>
       <Nav />

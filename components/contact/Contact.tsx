@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import ContactNumber from "./ContactNumber";
-import ContactAddress from "./ContactAddress";
+import SectionTitle from "../SectionTitle";
 
 const StyledContact = styled.div`
   padding: 2rem;
@@ -16,9 +16,12 @@ const StyledContact = styled.div`
 
 const Contact = () => {
   return (
-    <StyledContact>
-      <ContactNumber />
-    </StyledContact>
+    <>
+      <SectionTitle title="Get in Touch" />
+      <StyledContact>
+        <ContactNumber />
+      </StyledContact>
+    </>
   );
 };
 

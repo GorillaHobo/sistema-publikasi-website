@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import HeroImage from "./HeroImage";
 import HeroTitle from "./HeroTitle";
 import Counter from "../Counter";
-import { Props, ReactNode } from "react";
 
 const StyledHero = styled.div`
   height: 100vh;
@@ -35,17 +34,11 @@ const StyledHero = styled.div`
   }
 `;
 
-const Hero: React.FC<Props> = ({
-  page,
-  children,
-}: {
-  page: "index" | "about" | "contact";
-  children?: ReactNode;
-}) => {
+const Hero = ({ page }: { page: "index" | "about" | "contact" }) => {
   return (
     <StyledHero className={page === "index" && "index"}>
       <HeroImage page={page} />
-      <HeroTitle page={page}>{children}</HeroTitle>
+      <HeroTitle page={page} />
       {page === "index" && <Counter />}
     </StyledHero>
   );

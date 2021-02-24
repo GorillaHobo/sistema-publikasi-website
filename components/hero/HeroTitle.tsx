@@ -57,13 +57,7 @@ const Title = styled.span`
   }
 `;
 
-const HeroTitle: React.FC = ({
-  page,
-  children,
-}: {
-  page: string;
-  children?: React.ReactChild;
-}) => {
+const HeroTitle = ({ page }: { page: string }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isVisible] = useLazyLoader({ elementRef: containerRef });
   const { title, desc } = heroState[page];
@@ -71,12 +65,7 @@ const HeroTitle: React.FC = ({
   return (
     <StyledHeroTitle ref={containerRef}>
       <Title className={isVisible && "appear"}>{title}</Title>
-
-      {/* hide description only on contact page */}
-      {page !== "contact" && (
-        <p className={isVisible && "appear delay"}>{desc}</p>
-      )}
-      {children}
+      <p className={isVisible && "appear delay"}>{desc}</p>
     </StyledHeroTitle>
   );
 };
