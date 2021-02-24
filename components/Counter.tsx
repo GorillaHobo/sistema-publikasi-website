@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 
 interface INumber {
@@ -106,12 +107,40 @@ const StyledNumber = styled.li`
   }
 `;
 
+const easeOutQuad = (t: number): number => t * (2 - t);
+const frameDuration: number = 1000 / 60;
+const CountUpAnimation = ({
+  children,
+  duration = 2000,
+}: {
+  children: number;
+  duration?: number;
+}) => {
+  const countTo = children;
+  const [count, setCount] = useState<number>(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const totalFrames = Math.round(duration / frameDuration);
+    const counter = setInterval(() => {
+      frame++;
+      const progress = easeOutQuad(frame / totalFrames);
+      setCount(countTo * progress);
+
+      if (frame === totalFrames) {
+        clearInterval(counter);
+      }
+    }, frameDuration);
+  }, []);
+  return <>{Math.floor(count)}</>;
+};
+
 const Number = ({ num }: { num: INumber }) => {
   const { name, number, modifier } = num;
   return (
     <StyledNumber>
       <h1>
-        {number}
+        <CountUpAnimation>{number}</CountUpAnimation>
         {modifier}
       </h1>
       <h5>{name}</h5>

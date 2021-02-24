@@ -3,28 +3,24 @@ import styled from "@emotion/styled";
 type IMargin = "none" | "medium" | "large";
 
 const StyledTitle = styled.div`
-  margin-top: 4rem;
+  margin-bottom: 1rem;
   text-align: center;
 
   &.none {
-    margin-top: 0;
+    margin-top: 0rem;
   }
 
-  &.medium {
-    margin-top: 2;
+  & .medium {
+    margin-top: 2rem;
   }
 
   &.large {
-    margin-top: 4;
+    margin-top: 4rem;
   }
 
   & h1 {
     font-size: 3.6rem;
     margin: 0;
-  }
-
-  &.isBlog {
-    margin-top: 8rem;
   }
 
   @media ${(props) => props.theme.breakpoints.tablet} {
@@ -43,7 +39,7 @@ const StyledTitle = styled.div`
 
 const SectionTitle = ({
   title,
-  margin = "none",
+  margin = "large",
 }: {
   title: string;
   margin?: IMargin;

@@ -1,4 +1,7 @@
+import { useRef } from "react";
+import useLazyLoader from "../../lib/useLazyLoader";
 import styled from "@emotion/styled";
+import { heroState } from "../../contexts/HeroContext";
 
 const StyledHeroTitle = styled.div`
   color: white;
@@ -19,6 +22,21 @@ const StyledHeroTitle = styled.div`
   bottom: 0;
   left: 0;
 
+  & p,
+  span {
+    opacity: 0;
+    transition: opacity ease-in-out ${(props) => props.theme.speed.slower},
+      transform ease-in-out ${(props) => props.theme.speed.slower};
+    transform: translateY(50px);
+    &.appear {
+      opacity: 1;
+      transform: translateY(0px);
+      &.delay {
+        transition-delay: ${(props) => props.theme.speed.slower};
+      }
+    }
+  }
+
   @media ${(props) => props.theme.breakpoints.tablet} {
     margin-bottom: 0;
   }
@@ -37,15 +55,15 @@ const Title = styled.span`
   }
 `;
 
-const HeroTitle = () => {
+const HeroTitle = ({ page }: { page: "index" | "about" }) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible] = useLazyLoader({ elementRef: containerRef });
+  const { title, desc } = heroState[page];
+
   return (
-    <StyledHeroTitle>
-      <Title>Hello World</Title>
-      <p>
-        Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
-        facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
-        lacus tellus malesuada massa, quis varius mi purus non odio.
-      </p>
+    <StyledHeroTitle ref={containerRef}>
+      <Title className={isVisible && "appear"}>{title}</Title>
+      <p className={isVisible && "appear delay"}>{desc}</p>
     </StyledHeroTitle>
   );
 };

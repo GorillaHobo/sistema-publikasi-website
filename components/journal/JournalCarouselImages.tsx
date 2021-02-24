@@ -1,4 +1,3 @@
-import { CSSTransition, SwitchTransition } from "react-transition-group";
 import styled from "@emotion/styled";
 import { useJournalContext } from "../../contexts/JournalContext";
 
@@ -8,35 +7,35 @@ import JournalCarouselArrow from "./JournalCarouselArrow";
 
 const StyledJournalCarouselImages = styled.div`
   background: radial-gradient(#458588, #336366);
-  height: 100%;
-
+  width: 70%;
+  height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 5;
 
   user-select: none;
 
-  @media ${(props) => props.theme.breakpoints.mobile} {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     width: 100%;
   }
 `;
 
 const JournalCarouselImages = () => {
   const { journalState } = useJournalContext();
-  const { currentImage } = journalState;
+  const { currentImage, journals } = journalState;
+  console.log("journals", journals);
 
   return (
     <StyledJournalCarouselImages>
-      <JournalCarouselArrow />
-      <SwitchTransition>
-        <CSSTransition key={currentImage} timeout={200} classNames="fade">
-          <JournalCarouselImage />
-        </CSSTransition>
-      </SwitchTransition>
+      <JournalCarouselArrow direction="left" />
+      {journals.map((journal, index) => (
+        <JournalCarouselImage
+          current={currentImage}
+          index={index}
+          journal={journal}
+          key={index}
+        />
+      ))}
       <JournalCarouselDot />
-      <JournalCarouselArrow isRight />
+      <JournalCarouselArrow direction="right" />
     </StyledJournalCarouselImages>
   );
 };

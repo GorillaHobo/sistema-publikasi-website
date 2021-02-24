@@ -1,3 +1,11 @@
+export interface IJournal {
+  title: string;
+  date: string;
+  image: string;
+  alt: string;
+  href: string;
+}
+
 export const initialJournalState = {
   currentImage: 0,
   journals: [

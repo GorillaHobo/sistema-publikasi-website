@@ -32,7 +32,7 @@ const NavBackground = () => {
   return (
     <CSSTransition
       in={navState.sidebarState}
-      timeout={500}
+      timeout={300}
       classNames="fade"
       unmountOnExit
     >

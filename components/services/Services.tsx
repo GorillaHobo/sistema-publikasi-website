@@ -15,9 +15,11 @@ const StyledServices = styled.div`
 const Services = () => {
   return (
     <StyledServices>
-      <SectionTitle title={"Services"} />
+      <SectionTitle title={"Services"} margin="large" />
       {servicesState.map((service, index) => (
-        <ServicesCard service={service} key={index} />
+        <div>
+          <ServicesCard service={service} key={index} />
+        </div>
       ))}
     </StyledServices>
   );

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { heroState } from "../../contexts/HeroContext";
 
 import Image from "next/image";
 
@@ -9,7 +10,6 @@ const StyledHeroImage = styled.div`
   &.image {
     position: fixed;
     top: 0;
-    right: 0;
   }
 `;
 
@@ -25,15 +25,19 @@ const Overlay = styled.div`
   left: 0;
 `;
 
-const HeroImage: React.FC = () => {
+const HeroImage = ({ page }: { page: "index" | "about" }) => {
+  const { src, alt } = heroState[page];
+
   return (
     <StyledHeroImage>
       <Image
         className="image"
-        src="/hero.jpg"
+        src={src}
         layout="fill"
-        alt="Hero Image"
+        alt={alt}
         objectFit="cover"
+        objectPosition="fixed"
+        priority={true}
       />
       <Overlay />
     </StyledHeroImage>

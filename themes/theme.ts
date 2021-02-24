@@ -47,12 +47,13 @@ export const theme = {
     tablet: "only screen and (max-width: 1000px)",
   },
   speed: {
+    slower: "800ms",
     slow: "500ms",
     medium: "300ms",
     fast: "200ms",
   },
   transition: {
-    fade: `  &.fade-enter {
+    fade: `   &.fade-enter {
                 opacity: 0;
               }
               &.fade-enter-active {
@@ -64,29 +65,29 @@ export const theme = {
               &.fade-exit-active {
                 opacity: 0;
               }
-
               &.fade-enter-active, &.fade-exit-active {
-                transition: opacity ease 500ms;
+                transition: opacity ease 300ms;
               }
           `,
-    slide: `  &.fade-enter {
+    slide: `  &.slide-enter {
                 opacity: 0;
                 transform: translateX(-300px);
               }
-              &.fade-enter-active {
+              &.slide-enter-active {
                 opacity: 1;
-                transform: translateX(0px);
+                transform: translateX(0);
               }
-              &.fade-exit {
+              &.slide-exit {
                 opacity: 1;
-                transform: translateX(0px);
+                transform: translateX(0);
               }
-              &.fade-exit-active {
+              &.slide-exit-active {
                 opacity: 0;
                 transform: translateX(-300px);
               }
-              &.fade-exit-active, &.fade-enter-active{
-                transition: transform ease 500ms, opacity ease 500ms;
+
+              &.slide-enter-active, &.slide-exit-active {
+                transition: opacity ease 300ms, transform ease 300ms;
               }
           `,
   },

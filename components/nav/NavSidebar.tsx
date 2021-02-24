@@ -11,7 +11,6 @@ const StyledNavSidebar = styled.ul`
   width: 300px;
 
   list-style: none;
-
   display: none;
 
   position: fixed;
@@ -33,11 +32,11 @@ const NavSidebar = ({ navMenuItems }: { navMenuItems: INavMenuItem[] }) => {
   return (
     <CSSTransition
       in={navState.sidebarState}
-      timeout={500}
-      classNames="fade"
+      timeout={300}
+      classNames="slide"
       unmountOnExit
     >
-      <StyledNavSidebar className={navState.sidebarState && "active"}>
+      <StyledNavSidebar>
         {navMenuItems.map((item, index) => (
           <NavMenuItem item={item} key={index} />
         ))}

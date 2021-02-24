@@ -1,4 +1,5 @@
 import { InferGetStaticPropsType } from "next";
+import { JournalProvider } from "../contexts/JournalContext";
 
 import Layout from "../components/Layout";
 import Nav from "../components/nav/Nav";
@@ -9,7 +10,6 @@ import Testimony from "../components/testimony/Testimony";
 import Contact from "../components/contact/Contact";
 import BlogCards from "../components/blog/BlogCards";
 import Footer from "../components/footer/Footer";
-import Counter from "../components/Counter";
 
 import { getLatestPosts } from "../lib/api";
 
@@ -17,11 +17,12 @@ const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <Nav />
-      <Hero />
+      <Hero page="index" />
       <Journal />
       <Services />
       <Testimony />
       <BlogCards posts={allPosts} title="Latest Articles" />
+      <Contact />
       <Footer />
     </Layout>
   );

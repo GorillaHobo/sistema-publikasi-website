@@ -7,7 +7,10 @@ import Counter from "../Counter";
 const StyledHero = styled.div`
   height: 100vh;
   margin-top: ${(props) => props.theme.spacings.xl};
-  margin-bottom: 7rem;
+
+  &.index {
+    margin-bottom: 7rem;
+  }
 
   display: flex;
   justify-contents: center;
@@ -15,22 +18,28 @@ const StyledHero = styled.div`
   position: relative;
 
   @media ${(props) => props.theme.breakpoints.tablet} {
-    height: calc(100vh - 3rem);
+    height: 100vh;
     margin-top: 0;
+
+    &.index {
+      height: calc(100vh - 3rem);
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.mobile} {
     height: 100vh;
-    margin-bottom: 25rem;
+    &.index {
+      margin-bottom: 25rem;
+    }
   }
 `;
 
-const Hero = () => {
+const Hero = ({ page }: { page: "index" | "about" }) => {
   return (
-    <StyledHero>
-      <HeroImage />
-      <HeroTitle />
-      <Counter />
+    <StyledHero className={page === "index" && "index"}>
+      <HeroImage page={page} />
+      <HeroTitle page={page} />
+      {page === "index" && <Counter />}
     </StyledHero>
   );
 };

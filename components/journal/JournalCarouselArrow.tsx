@@ -6,6 +6,8 @@ import {
   FaChevronCircleLeft as LeftArrow,
 } from "react-icons/fa";
 
+type IArrow = "left" | "right";
+
 const StyledJournalCarouselArrow = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-size: 2.3rem;
@@ -33,18 +35,18 @@ const StyledJournalCarouselArrow = styled.div`
   }
 `;
 
-const JournalCarouselArrow = ({ isRight = false }: { isRight?: boolean }) => {
+const JournalCarouselArrow = ({ direction }: { direction: IArrow }) => {
   const { journalDispatch } = useJournalContext();
   return (
     <StyledJournalCarouselArrow
       onClick={
-        isRight
+        direction === "right"
           ? () => journalDispatch({ type: "NEXT_IMAGE" })
           : () => journalDispatch({ type: "PREV_IMAGE" })
       }
-      className={isRight ? "right" : "left"}
+      className={direction}
     >
-      {isRight ? <RightArrow /> : <LeftArrow />}
+      {direction === "right" ? <RightArrow /> : <LeftArrow />}
     </StyledJournalCarouselArrow>
   );
 };

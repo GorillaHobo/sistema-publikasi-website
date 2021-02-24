@@ -1,11 +1,12 @@
 import { JournalProvider } from "../../contexts/JournalContext";
 import styled from "@emotion/styled";
 
+import SectionTitle from "../SectionTitle";
 import JournalInfo from "./JournalInfo";
 import JournalCarouselImages from "./JournalCarouselImages";
 
 const StyledJournal = styled.div`
-  height: 90vh;
+  height: 100vh;
   padding: ${(props) => props.theme.spacings.md};
 
   display: flex;
@@ -15,7 +16,7 @@ const StyledJournal = styled.div`
     text-align: center;
   }
 
-  @media ${(props) => props.theme.breakpoints.mobile} {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     flex-direction: column;
     padding: ${(props) => props.theme.spacings.sm};
   }
@@ -24,6 +25,7 @@ const StyledJournal = styled.div`
 const Journal = () => {
   return (
     <JournalProvider>
+      <SectionTitle title="Publised Journals" gap={20} className="active" />
       <StyledJournal>
         <JournalCarouselImages />
         <JournalInfo />

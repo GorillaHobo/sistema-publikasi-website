@@ -20,6 +20,20 @@ const StyledServicesCard = styled.section`
     padding: 1rem;
     flex-direction: column-reverse;
   }
+
+  &.fade {
+    opacity: 0;
+    transition: opacity ease-in-out ${(props) => props.theme.speed.slower},
+      transform ease-in-out ${(props) => props.theme.speed.slower};
+    transform: translateY(50px);
+    &.appear {
+      opacity: 1;
+      transform: translateY(0px);
+      &.delay {
+        transition-delay: ${(props) => props.theme.speed.slower};
+      }
+    }
+  }
 `;
 
 const ServicesCard = ({ service }: { service: IServices }) => {

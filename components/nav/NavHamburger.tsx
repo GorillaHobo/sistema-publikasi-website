@@ -22,11 +22,14 @@ const NavHamburger = () => {
     <StyledNavHamburger
       onClick={() => setNavState({ sidebarState: !navState.sidebarState })}
     >
-      {navState.sidebarState ? (
-        <IoCloseSharp size="1.8rem" color="#282828" />
-      ) : (
-        <IoMenuSharp size="1.8rem" color="#282828" />
-      )}
+      <a>
+        {" "}
+        {navState.sidebarState ? (
+          <IoCloseSharp size="1.8rem" color="#282828" />
+        ) : (
+          <IoMenuSharp size="1.8rem" color="#282828" />
+        )}
+      </a>{" "}
     </StyledNavHamburger>
   );
 };

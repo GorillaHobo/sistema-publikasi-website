@@ -17,7 +17,6 @@ const StyledJournalInfo = styled.div`
 
   & div {
     width: 100%;
-    margin-top: ${(props) => props.theme.spacings.l};
 
     display: flex;
     flex-direction: column;
@@ -28,13 +27,10 @@ const StyledJournalInfo = styled.div`
     }
   }
 
-  @media ${(props) => props.theme.breakpoints.mobile} {
+  @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 1rem;
     width: 100%;
     & div {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
     }
   }
 `;
@@ -46,7 +42,6 @@ const JournalInfo = () => {
   const { date, href, title } = currentJournal;
   return (
     <StyledJournalInfo>
-      <SectionTitle title="Published Journals" margin="none" />
       <div>
         <p>
           <span>Title:</span>

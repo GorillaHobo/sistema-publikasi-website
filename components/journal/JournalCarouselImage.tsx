@@ -1,33 +1,41 @@
 import Image from "next/image";
 import styled from "@emotion/styled";
-import { useJournalContext } from "../../contexts/JournalContext";
+import { IJournal } from "../../contexts/journalState";
 
 const StyledJournalCarouselImage = styled.div`
-  width: 100%;
-  height: 95%;
-  position: relative;
-  margin: 1rem 1rem;
+  opacity: 0;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
 
-  transition: transform ease 300ms;
-  &:hover {
-    transform: scale(1.01);
+  transform: scale(0.95);
+  transition: opacity 500ms ease, transform 500ms ease;
+  &.active {
+    opacity: 1;
+    transform: scale(1);
   }
-
-  ${(props) => props.theme.transition.fade};
 `;
 
-const JournalCarouselImage = () => {
-  const { journalState } = useJournalContext();
-  const { journals, currentImage } = journalState;
-  const current = journals[currentImage];
+const JournalCarouselImage = ({
+  current = 0,
+  journal,
+  index = 0,
+}: {
+  current?: number;
+  journal?: IJournal;
+  index?: number;
+}) => {
+  const { image, alt } = journal;
   return (
-    <StyledJournalCarouselImage>
+    <StyledJournalCarouselImage className={current === index && "active"}>
       <Image
-        src={current.image}
+        src={image}
         layout="fill"
         quality={100}
+        alt={alt}
         objectFit="contain"
-        alt={current.alt}
       />
     </StyledJournalCarouselImage>
   );

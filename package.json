@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-	"export": "next export",
-	"start": "next start"
+    "export": "next export"
   },
   "dependencies": {
     "@babel/core": "^7.12.16",
@@ -16,6 +15,7 @@
     "@emotion/styled": "^11.1.5",
     "@types/marked": "^1.2.2",
     "@types/react-transition-group": "^4.4.0",
+    "axios": "^0.21.1",
     "gray-matter": "^4.0.2",
     "marked": "^2.0.0",
     "next": "10.0.6",

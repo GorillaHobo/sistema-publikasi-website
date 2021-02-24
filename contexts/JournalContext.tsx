@@ -1,7 +1,7 @@
 import { createContext, useReducer, useContext } from "react";
 import { initialJournalState } from "./journalState";
 
-type IState = typeof initialJournalState;
+export type IJournalState = typeof initialJournalState;
 
 type IActions =
   | { type: "SET_CURRENT_IMAGE"; payload: number }
@@ -9,11 +9,11 @@ type IActions =
   | { type: "PREV_IMAGE" };
 
 type IProps = {
-  journalState: IState;
+  journalState: IJournalState;
   journalDispatch: React.Dispatch<IActions>;
 };
 
-const JournalReducer = (state: IState, action: IActions) => {
+const JournalReducer = (state: IJournalState, action: IActions) => {
   const length = state.journals.length;
   switch (action.type) {
     case "SET_CURRENT_IMAGE":
