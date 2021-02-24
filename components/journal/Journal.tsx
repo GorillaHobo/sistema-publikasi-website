@@ -25,7 +25,7 @@ const StyledJournal = styled.div`
 const Journal = () => {
   return (
     <JournalProvider>
-      <SectionTitle title="Publised Journals" />
+      <SectionTitle title="Published Journals" />
       <StyledJournal>
         <JournalCarouselImages />
         <JournalInfo />

@@ -11,7 +11,7 @@ function useLazyLoader<T extends HTMLElement = HTMLDivElement>({
   elementRef,
   threshold = 1,
   root = null,
-  rootMargin = "0%",
+  rootMargin = "50%",
   freezeOnceVisible = true,
 }: Args<T>): ReturnType {
   const observer = useRef<IntersectionObserver | null>(null);
