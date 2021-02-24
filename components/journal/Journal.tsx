@@ -25,7 +25,7 @@ const StyledJournal = styled.div`
 const Journal = () => {
   return (
     <JournalProvider>
-      <SectionTitle title="Publised Journals" gap={20} className="active" />
+      <SectionTitle title="Publised Journals" />
       <StyledJournal>
         <JournalCarouselImages />
         <JournalInfo />
