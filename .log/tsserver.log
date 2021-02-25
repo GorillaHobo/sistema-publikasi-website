@@ -2504,3 +2504,68 @@ Info 2331 [16:04:59.980] Finishing updateGraphWorker: Project: /home/tony/Docume
 Info 2332 [16:05:02.201] Before ensureProjectForOpenFiles:
 Info 2333 [16:05:02.201] After ensureProjectForOpenFiles:
 Info 2334 [16:05:02.201] got projects updated in background, updating diagnostics for /home/tony/Documents/nextjs/sistema-publikasi/components/Partners.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/index.tsx
+Info 2335 [16:17:33.963] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2336 [16:17:34.022] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 487 structureChanged: false Elapsed: 59.05209599994123ms
+Info 2337 [16:17:34.022] Different program with same set of files:: structureIsReused:: 2
+Info 2338 [16:17:34.251] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2339 [16:17:34.275] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 488 structureChanged: false Elapsed: 23.242944999830797ms
+Info 2340 [16:17:34.275] Different program with same set of files:: structureIsReused:: 2
+Info 2341 [16:17:35.134] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2342 [16:17:35.177] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 489 structureChanged: false Elapsed: 43.15563699998893ms
+Info 2343 [16:17:35.177] Different program with same set of files:: structureIsReused:: 2
+Info 2344 [16:17:35.493] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2345 [16:17:35.521] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 490 structureChanged: false Elapsed: 27.662185000022873ms
+Info 2346 [16:17:35.521] Different program with same set of files:: structureIsReused:: 2
+Info 2347 [16:17:36.104] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2348 [16:17:36.126] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 491 structureChanged: false Elapsed: 21.235714999958873ms
+Info 2349 [16:17:36.126] Different program with same set of files:: structureIsReused:: 2
+Info 2350 [16:17:36.568] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2351 [16:17:36.597] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 492 structureChanged: false Elapsed: 29.29626199998893ms
+Info 2352 [16:17:36.597] Different program with same set of files:: structureIsReused:: 2
+Info 2353 [16:17:37.972] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2354 [16:17:38.009] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 493 structureChanged: false Elapsed: 36.147161999950185ms
+Info 2355 [16:17:38.009] Different program with same set of files:: structureIsReused:: 2
+Info 2356 [16:17:46.382] Search path: /home/tony/Documents/nextjs/sistema-publikasi/components/blog
+Info 2357 [16:17:46.386] For info: /home/tony/Documents/nextjs/sistema-publikasi/components/blog/BlogCards.tsx :: Config file name: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2358 [16:18:07.324] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2359 [16:18:07.379] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 494 structureChanged: false Elapsed: 54.62571500008926ms
+Info 2360 [16:18:07.379] Different program with same set of files:: structureIsReused:: 2
+Info 2361 [16:18:09.056] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2362 [16:18:09.121] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 495 structureChanged: false Elapsed: 64.74398900009692ms
+Info 2363 [16:18:09.121] Different program with same set of files:: structureIsReused:: 2
+Info 2364 [16:18:36.844] Search path: /home/tony/Documents/nextjs/sistema-publikasi/pages
+Info 2365 [16:18:36.844] For info: /home/tony/Documents/nextjs/sistema-publikasi/pages/blog.tsx :: Config file name: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2366 [16:18:43.968] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2367 [16:18:44.026] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 496 structureChanged: false Elapsed: 57.49022400006652ms
+Info 2368 [16:18:44.026] Different program with same set of files:: structureIsReused:: 2
+Info 2369 [16:18:46.062] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2370 [16:18:46.102] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 497 structureChanged: false Elapsed: 38.89467600011267ms
+Info 2371 [16:18:46.102] Different program with same set of files:: structureIsReused:: 2
+Info 2372 [16:19:01.125] DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi/.next/routes-manifest.json 0:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2373 [16:19:01.125] Elapsed:: 0.30032899999059737ms DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi/.next/routes-manifest.json 0:: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2374 [16:19:01.391] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2375 [16:19:01.397] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 498 structureChanged: false Elapsed: 5.709367000032216ms
+Info 2376 [16:19:03.626] Before ensureProjectForOpenFiles:
+Info 2377 [16:19:03.626] After ensureProjectForOpenFiles:
+Info 2378 [16:19:03.627] got projects updated in background, updating diagnostics for /home/tony/Documents/nextjs/sistema-publikasi/components/Partners.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/index.tsx,/home/tony/Documents/nextjs/sistema-publikasi/components/blog/BlogCards.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/blog.tsx
+Info 2379 [16:19:08.639] DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2380 [16:19:08.639] Elapsed:: 0.3508369999472052ms DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2381 [16:19:08.969] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2382 [16:19:08.976] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 499 structureChanged: false Elapsed: 6.9412080000620335ms
+Info 2383 [16:19:11.139] Before ensureProjectForOpenFiles:
+Info 2384 [16:19:11.139] After ensureProjectForOpenFiles:
+Info 2385 [16:19:11.139] got projects updated in background, updating diagnostics for /home/tony/Documents/nextjs/sistema-publikasi/components/Partners.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/index.tsx,/home/tony/Documents/nextjs/sistema-publikasi/components/blog/BlogCards.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/blog.tsx
+Info 2386 [16:19:14.687] DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2387 [16:19:14.687] Elapsed:: 0.11907700006850064ms DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2388 [16:19:14.975] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2389 [16:19:14.983] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 500 structureChanged: false Elapsed: 7.8854640000499785ms
+Info 2390 [16:19:17.187] Before ensureProjectForOpenFiles:
+Info 2391 [16:19:17.187] After ensureProjectForOpenFiles:
+Info 2392 [16:19:17.187] got projects updated in background, updating diagnostics for /home/tony/Documents/nextjs/sistema-publikasi/components/Partners.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/index.tsx,/home/tony/Documents/nextjs/sistema-publikasi/components/blog/BlogCards.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/blog.tsx
+Info 2393 [16:19:17.967] DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2394 [16:19:17.967] Elapsed:: 0.2374030000064522ms DirectoryWatcher:: Triggered with /home/tony/Documents/nextjs/sistema-publikasi :: WatchInfo: /home/tony/Documents/nextjs/sistema-publikasi 1 undefined Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json WatchType: Wild card directory
+Info 2395 [16:19:18.257] Starting updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json
+Info 2396 [16:19:18.264] Finishing updateGraphWorker: Project: /home/tony/Documents/nextjs/sistema-publikasi/tsconfig.json Version: 501 structureChanged: false Elapsed: 6.566626999992877ms
+Info 2397 [16:19:20.467] Before ensureProjectForOpenFiles:
+Info 2398 [16:19:20.468] After ensureProjectForOpenFiles:
+Info 2399 [16:19:20.468] got projects updated in background, updating diagnostics for /home/tony/Documents/nextjs/sistema-publikasi/components/Partners.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/index.tsx,/home/tony/Documents/nextjs/sistema-publikasi/components/blog/BlogCards.tsx,/home/tony/Documents/nextjs/sistema-publikasi/pages/blog.tsx

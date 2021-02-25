@@ -12,7 +12,7 @@ const Blog = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <Layout>
       <Nav />
       <SectionTitle title="Articles" margin="large" isBlog />
-      <BlogCards posts={allPosts} title="Articles" isBlog />
+      <BlogCards posts={allPosts} />
       <Footer />
     </Layout>
   );
