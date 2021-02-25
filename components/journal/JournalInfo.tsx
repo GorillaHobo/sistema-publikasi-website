@@ -15,15 +15,15 @@ const StyledJournalInfo = styled.div`
     margin: 0 0 1rem 0;
   }
 
-  & div {
+  & div.container {
     width: 100%;
 
     display: flex;
     flex-direction: column;
 
-    & span {
+    &.title {
       font-weight: bold;
-      color: ${(props) => props.theme.colors.blackLight};
+      color: ${(props) => props.theme.colors.blue};
     }
   }
 
@@ -42,14 +42,14 @@ const JournalInfo = () => {
   const { date, href, title } = currentJournal;
   return (
     <StyledJournalInfo>
-      <div>
+      <div className="container">
         <p>
-          <span>Title:</span>
+          <span className="title">Title:</span>
           <br />
           {title}
         </p>
         <p>
-          <span>Year:</span>
+          <span className="title">Year:</span>
           <br />
           {date}
         </p>

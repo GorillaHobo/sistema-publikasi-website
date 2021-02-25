@@ -2,8 +2,9 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import { BsBoxArrowInUpRight as LinkIcon } from "react-icons/bs";
 import { AiOutlineSave as SaveIcon } from "react-icons/ai";
+import { BsArrowRight as ArrowIcon } from "react-icons/bs";
 
-type IIcon = "arrow" | "save";
+type IIcon = "arrow" | "save" | "link";
 
 interface IButton {
   name: string;
@@ -45,6 +46,8 @@ const Button = ({ name, href = "#", icon, shadow = false }: IButton) => {
   const getIcon = (icon: IIcon) => {
     switch (icon) {
       case "arrow":
+        return <ArrowIcon />;
+      case "link":
         return <LinkIcon />;
       case "save":
         return <SaveIcon />;

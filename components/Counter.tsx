@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import useLazyLoader from "../lib/useLazyLoader";
+import { useState, useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 
 interface INumber {
@@ -112,35 +113,46 @@ const frameDuration: number = 1000 / 60;
 const CountUpAnimation = ({
   children,
   duration = 2000,
+  isVisible,
 }: {
   children: number;
   duration?: number;
+  isVisible?: boolean;
 }) => {
   const countTo = children;
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
-    let frame = 0;
-    const totalFrames = Math.round(duration / frameDuration);
-    const counter = setInterval(() => {
-      frame++;
-      const progress = easeOutQuad(frame / totalFrames);
-      setCount(countTo * progress);
+    if (isVisible) {
+      let frame = 0;
+      const totalFrames = Math.round(duration / frameDuration);
+      const counter = setInterval(() => {
+        frame++;
+        const progress = easeOutQuad(frame / totalFrames);
+        setCount(countTo * progress);
 
-      if (frame === totalFrames) {
-        clearInterval(counter);
-      }
-    }, frameDuration);
-  }, []);
+        if (frame === totalFrames) {
+          clearInterval(counter);
+        }
+      }, frameDuration);
+    }
+    /* return () => clearInterval(counter); */
+  }, [isVisible]);
   return <>{Math.floor(count)}</>;
 };
 
 const Number = ({ num }: { num: INumber }) => {
+  const componentRef = useRef<HTMLLIElement | null>(null);
+  const [isVisible] = useLazyLoader({
+    elementRef: componentRef,
+    threshold: 1,
+    rootMargin: "0%",
+  });
   const { name, number, modifier } = num;
   return (
-    <StyledNumber>
+    <StyledNumber ref={componentRef}>
       <h1>
-        <CountUpAnimation>{number}</CountUpAnimation>
+        <CountUpAnimation isVisible={isVisible}>{number}</CountUpAnimation>
         {modifier}
       </h1>
       <h5>{name}</h5>

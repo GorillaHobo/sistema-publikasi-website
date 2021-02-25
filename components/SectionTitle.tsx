@@ -18,6 +18,10 @@ const StyledTitle = styled.div`
     margin-top: 4rem;
   }
 
+  &.isBlog {
+    margin-top: 8rem;
+  }
+
   & h1 {
     font-size: 3.6rem;
     margin: 0;
@@ -40,12 +44,14 @@ const StyledTitle = styled.div`
 const SectionTitle = ({
   title,
   margin = "large",
+  isBlog = false,
 }: {
   title: string;
   margin?: IMargin;
+  isBlog?: boolean;
 }) => {
   return (
-    <StyledTitle className={margin}>
+    <StyledTitle className={`${margin} ${isBlog && "isBlog"}`}>
       <h1>{title}</h1>
     </StyledTitle>
   );

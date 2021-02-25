@@ -9,6 +9,7 @@ import Services from "../components/services/Services";
 import Testimony from "../components/testimony/Testimony";
 import Contact from "../components/contact/Contact";
 import BlogCards from "../components/blog/BlogCards";
+import Partners from "../components/Partners";
 import Footer from "../components/footer/Footer";
 
 import { getLatestPosts } from "../lib/api";
@@ -21,8 +22,9 @@ const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Journal />
       <Services />
       <Testimony />
-      <BlogCards posts={allPosts} title="Latest Articles" />
+      <Partners />
       <Contact />
+      <BlogCards posts={allPosts} />
       <Footer />
     </Layout>
   );

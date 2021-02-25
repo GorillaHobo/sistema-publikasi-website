@@ -1,13 +1,14 @@
-import Link from "next/link";
 import styled from "@emotion/styled";
 import { IPost } from "../../lib/api";
 
-import SectionTitle from "../SectionTitle";
+import Button from "../Button";
 import BlogCard from "./BlogCard";
 
 const StyledArticles = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   & .show-more {
     transition: color ease 200ms;
@@ -27,26 +28,15 @@ const StyledBlogCards = styled.div`
   align-items: center;
 `;
 
-const BlogCards = ({
-  posts,
-  title,
-  isBlog,
-}: {
-  posts: IPost[];
-  title: string;
-  isBlog?: boolean;
-}) => {
+const BlogCards = ({ posts }: { posts: IPost[] }) => {
   return (
     <StyledArticles>
-      <SectionTitle title={title} margin="large" />
       <StyledBlogCards>
         {posts.map((post, index) => (
           <BlogCard key={index} index={index} post={post} />
         ))}
       </StyledBlogCards>
-      <Link href="/blog">
-        <h4 className="show-more">Show More Articles...</h4>
-      </Link>
+      <Button name="Show More Articles" href="/blog" icon="arrow" />
     </StyledArticles>
   );
 };

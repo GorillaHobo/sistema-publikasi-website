@@ -1,3 +1,4 @@
+import SectionTitle from "../components/SectionTitle";
 import { InferGetStaticPropsType } from "next";
 import Layout from "../components/Layout";
 import Nav from "../components/nav/Nav";
@@ -10,6 +11,7 @@ const Blog = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <Nav />
+      <SectionTitle title="Articles" margin="large" isBlog />
       <BlogCards posts={allPosts} title="Articles" isBlog />
       <Footer />
     </Layout>
