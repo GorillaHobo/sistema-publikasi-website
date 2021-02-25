@@ -84,8 +84,8 @@ const Contact = ({ contact }: { contact: IContact }): JSX.Element | null => {
       <IconContainer>{getIcon({ name: name, size: 40 })}</IconContainer>
       <h4>{name.toUpperCase()}</h4>
       <div>
-        {items.map((item) => (
-          <div>
+        {items.map((item, index) => (
+          <div key={index}>
             <h4>{item.name}</h4>
             <p>{item.desc}</p>
           </div>
@@ -98,7 +98,7 @@ const Contact = ({ contact }: { contact: IContact }): JSX.Element | null => {
 const ContactNumber = () => {
   return (
     <StyledContacts>
-      {contactsState.map((contact, index) => (
+      {contactsState.map((contact) => (
         <Contact contact={contact} key={contact.name} />
       ))}
     </StyledContacts>

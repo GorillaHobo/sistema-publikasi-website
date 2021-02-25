@@ -21,7 +21,6 @@ const StyledJournalCarouselImages = styled.div`
 const JournalCarouselImages = () => {
   const { journalState } = useJournalContext();
   const { currentImage, journals } = journalState;
-  console.log("journals", journals);
 
   return (
     <StyledJournalCarouselImages>

@@ -22,9 +22,9 @@ const Home = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <Journal />
       <Services />
       <Testimony />
-      <Contact />
-      <BlogCards posts={allPosts} />
       <Partners />
+      <BlogCards posts={allPosts} />
+      <Contact />
       <Footer />
     </Layout>
   );

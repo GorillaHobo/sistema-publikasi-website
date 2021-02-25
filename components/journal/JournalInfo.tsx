@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { useJournalContext } from "../../contexts/JournalContext";
 
-import SectionTitle from "../SectionTitle";
 import Button from "../Button";
 
 const StyledJournalInfo = styled.div`
@@ -30,8 +29,6 @@ const StyledJournalInfo = styled.div`
   @media ${(props) => props.theme.breakpoints.tablet} {
     padding: 1rem;
     width: 100%;
-    & div {
-    }
   }
 `;
 

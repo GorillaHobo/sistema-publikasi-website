@@ -11,7 +11,7 @@ const Blog = ({ allPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <Nav />
-      <SectionTitle title="Articles" margin="large" isBlog />
+      <SectionTitle title="Articles" margin="huge" />
       <BlogCards posts={allPosts} />
       <Footer />
     </Layout>

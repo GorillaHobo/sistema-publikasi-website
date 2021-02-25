@@ -32,7 +32,7 @@ const JournalFull = () => {
           quality={100}
           alt={current.alt}
         />
-      </div>{" "}
+      </div>
     </StyledJournalFull>
   );
 };

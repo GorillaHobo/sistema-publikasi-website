@@ -52,7 +52,7 @@ const Button = ({ name, href = "#", icon, shadow = false }: IButton) => {
       case "save":
         return <SaveIcon />;
       default:
-        return <></>;
+        return null;
     }
   };
 
