@@ -3,14 +3,13 @@ import { heroState } from "../../contexts/HeroContext";
 
 import Image from "next/image";
 
-const StyledHeroImage = styled.div`
+const StyledHeroImage = styled.div<{ src: string }>`
   position: relative;
   width: 100%;
-
-  &.image {
-    position: fixed;
-    top: 0;
-  }
+  background-image: url(${(props) => props.src});
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 `;
 
 const Overlay = styled.div`
@@ -29,8 +28,8 @@ const HeroImage = ({ page }: { page: string }) => {
   const { src, alt } = heroState[page];
 
   return (
-    <StyledHeroImage>
-      <Image
+    <StyledHeroImage src={src}>
+      {/* <Image
         className="image"
         src={src}
         layout="fill"
@@ -38,7 +37,7 @@ const HeroImage = ({ page }: { page: string }) => {
         objectFit="cover"
         objectPosition="fixed"
         priority={true}
-      />
+      /> */}
       <Overlay />
     </StyledHeroImage>
   );

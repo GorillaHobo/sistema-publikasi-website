@@ -1,5 +1,4 @@
 import { InferGetStaticPropsType } from "next";
-import { JournalProvider } from "../contexts/JournalContext";
 
 import Layout from "../components/Layout";
 import Nav from "../components/nav/Nav";

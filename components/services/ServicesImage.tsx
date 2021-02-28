@@ -2,14 +2,11 @@ import Image from "next/image";
 import styled from "@emotion/styled";
 
 const StyledServicesImage = styled.div`
-  padding: 2rem;
-  max-width: 300px;
-
+    background-color; red;
   overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 300px;
+    width: 100%;
 
   position: relative;
 

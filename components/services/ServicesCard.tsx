@@ -1,47 +1,43 @@
 import styled from "@emotion/styled";
 import { IServices } from "../../contexts/servicesState";
 
-import ServicesImage from "./ServicesImage";
+/* import ServicesImage from "./ServicesImage"; */
 import ServicesInfo from "./ServicesInfo";
+import ServicesInfoIcon from "./ServicesInfoIcon";
 
 const StyledServicesCard = styled.section`
-  box-shadow: ${(props) => props.theme.shadows.large};
-  padding: 2rem;
+  max-width: 300px;
   margin-bottom: 1rem;
+  padding: 1rem;
 
-  width: 100%;
-
-  display: flex;
-
-  @media ${(props) => props.theme.breakpoints.tablet} {
-    padding: 1.5rem;
-  }
-  @media ${(props) => props.theme.breakpoints.mobile} {
-    padding: 1rem;
-    flex-direction: column-reverse;
-  }
-
-  &.fade {
-    opacity: 0;
-    transition: opacity ease-in-out ${(props) => props.theme.speed.slower},
-      transform ease-in-out ${(props) => props.theme.speed.slower};
-    transform: translateY(50px);
-    &.appear {
-      opacity: 1;
-      transform: translateY(0px);
-      &.delay {
-        transition-delay: ${(props) => props.theme.speed.slower};
-      }
-    }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity ease ${(props) => props.theme.speed.slow},
+    transform ease ${(props) => props.theme.speed.slow};
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
 
-const ServicesCard = ({ service }: { service: IServices }) => {
-  const { alt, desc, image, title } = service;
+const ServicesCard = ({
+  service,
+  isVisible,
+  index,
+}: {
+  service: IServices;
+  isVisible: boolean;
+  index: number;
+}) => {
+  const { alt, desc, image, title, icon } = service;
   return (
-    <StyledServicesCard>
+    <StyledServicesCard
+      className={isVisible ? "active" : ""}
+      style={{ transitionDelay: `${200 * index}ms` }}
+    >
+      {/* <ServicesImage alt={alt} image={image} /> */}
+      <ServicesInfoIcon icon={icon} />
       <ServicesInfo title={title} desc={desc} />
-      <ServicesImage alt={alt} image={image} />
     </StyledServicesCard>
   );
 };
